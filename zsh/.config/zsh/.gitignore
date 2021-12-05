@@ -1,0 +1,4 @@
+.zcompdump
+.zhistory
+.zshrc.zwc
+plugins/antigen.zsh
