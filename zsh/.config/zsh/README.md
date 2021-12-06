@@ -7,3 +7,4 @@ TODO
 4. Look into https://github.com/jeffreytse/zsh-vi-mode
 5. https://thevaluable.dev/zsh-install-configure-mouseless/
 6. Look into the error in which I get cannot find file ~/.zshrc
+7. Add antigen curl command if antigen isn't already downloaded
