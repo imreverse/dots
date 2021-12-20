@@ -9,7 +9,13 @@ require "bufferline".setup
             gui = ""
         },
         indicator_selected = {
-            guifg = {
+            guifg =
+            {
+                attribute = "bg",
+                highlight = "Normal"
+            },
+            guibg =
+            {
                 attribute = "bg",
                 highlight = "Normal"
             }
