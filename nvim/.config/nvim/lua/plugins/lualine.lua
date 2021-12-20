@@ -96,7 +96,7 @@ require'lualine'.setup
     options =
     {
         icons_enabled = true,
-        theme = 'tokyonight',
+        theme = 'sonokai',
         section_separators = { left = leftSecSep, right = rightSecSep },
         component_separators = { left = leftComSep, right = rightComSep },
         disabled_filetypes = {}
@@ -170,18 +170,10 @@ require'lualine'.setup
         lualine_a = {},
         lualine_b = {},
         lualine_c = {'filename'},
-        lualine_x =
-        {
-            {getPos},
-            {
-                'filetype',
-                fmt = string.upper,
-                colored = false
-            }
-        },
+        lualine_x = {},
         lualine_y = {},
         lualine_z = {}
     },
     tabline = {},
-    extensions = { 'nvim-tree' }
+    extensions = { 'fugitive', 'nvim-tree', 'toggleterm' }
 }

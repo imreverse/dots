@@ -15,6 +15,16 @@ return require('packer').startup(function()
         config = function() require('plugins.nvim-web-devicons') end
     }
     use 'folke/tokyonight.nvim'                         -- Colorscheme
+    use 'projekt0n/github-nvim-theme'
+    use 'catppuccin/nvim'
+    use 'bluz71/vim-moonfly-colors'
+    use 'sickill/vim-monokai'
+    use 'sainnhe/sonokai'
+    use
+    {
+        'ellisonleao/gruvbox.nvim',
+        requires = 'rktjmp/lush.nvim'
+    }
     use
     {
         'mhinz/vim-startify',                           -- Dashboard

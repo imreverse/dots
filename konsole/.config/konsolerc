@@ -1,0 +1,28 @@
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAOLAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAHABzAGUAcwBzAGkAbwBuAFQAbwBvAGwAYgBhAHIBAAAAAP////8AAAAAAAAAAA==
+StatusBar=Disabled
+eDP1 Window-Maximized 1920x1080=true
+
+[Desktop Entry]
+DefaultProfile=d3F.profile
+
+[KonsoleWindow]
+RemoveWindowTitleBarAndFrame=true
+ShowMenuBarByDefault=false
+
+[MainWindow]
+HDMI2 eDP1 Window-Maximized 1920x1080=true
+HDMI2 eDP1 Window-Maximized 3840x2160=true
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAP6AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAHABzAGUAcwBzAGkAbwBuAFQAbwBvAGwAYgBhAHIAAAAAAP////8AAAAAAAAAAA==
+StatusBar=Disabled
+ToolBarsMovable=Disabled
+eDP1 HDMI2 Window-Maximized 1920x1080=true
+eDP1 HDMI2 Window-Maximized 3840x2160=true
+eDP1 Height 1920x1080=1056
+eDP1 Width 1920x1080=960
+eDP1 Window-Maximized 1920x1080=true
+eDP1 XPosition 1920x1080=320
+eDP1 YPosition 1920x1080=194
+
+[UiSettings]
+ColorScheme=Default
