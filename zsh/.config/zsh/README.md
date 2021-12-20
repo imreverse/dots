@@ -8,3 +8,4 @@ TODO
 5. https://thevaluable.dev/zsh-install-configure-mouseless/
 6. Look into the error in which I get cannot find file ~/.zshrc
 7. Add antigen curl command if antigen isn't already downloaded
+8. Find a way to do invert selection in CLI

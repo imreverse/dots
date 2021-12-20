@@ -40,6 +40,7 @@ setopt INC_APPEND_HISTORY
 setopt EXTENDED_HISTORY
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#444444"
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+setopt extendedglob # Use invert ^ for file selection
 
 # bindkey -v # Vi Mode Not necessary if EDITOR already set
 bindkey '^[ ' autosuggest-accept
