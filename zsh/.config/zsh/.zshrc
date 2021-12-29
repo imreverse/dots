@@ -43,7 +43,9 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 setopt extendedglob # Use invert ^ for file selection
 
 # bindkey -v # Vi Mode Not necessary if EDITOR already set
+bindkey -v '^?' backward-delete-char    # Backspace in Vi mode
 bindkey '^[ ' autosuggest-accept
+bindkey '^[l' history-substring-search-up
 bindkey '^[k' history-substring-search-up
 bindkey '^[j' history-substring-search-down
 bindkey '^[[A' history-substring-search-up

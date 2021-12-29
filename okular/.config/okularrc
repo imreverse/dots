@@ -8,6 +8,7 @@ iconViewIconSize=43
 MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAAAAB4AAAAPSAAAABAAAAAQAAAAIAAAACPwAAAADAAAAAQAAAAEAAAAsAHEAdQBpAGMAawBBAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHICAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAAAMAAAABAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAA==
 ToolBarsMovable=Disabled
+eDP-1 Window-Maximized 1920x1080=true
 eDP1 Height 1920x1080=1028
 eDP1 Width 1920x1080=960
 eDP1 Window-Maximized 1920x1080=true
@@ -18,23 +19,5 @@ eDP1 YPosition 1920x1080=52
 ToolButtonStyle=IconOnly
 
 [Recent Files]
-File1[$e]=$HOME/Downloads/Order_ID_3871077996.pdf
-File10[$e]=$HOME/.work/Confidential/AADHAR v2.pdf
-File2[$e]=$HOME/.work/!Resumés/AAYUSHTYAGI_RESUME.pdf
-File3[$e]=$HOME/.work/!Resumés/Aayush_Tyagi_Resume.pdf
-File4[$e]=$HOME/Downloads/IdeaPad_5_Pro_16ACH6_Multiple_Model_Specification.pdf
-File5[$e]=$HOME/Downloads/IdeaPad_5_Pro_16ACH6_Spec.pdf
-File6[$e]=$HOME/.config/nvim/README.md
-File7[$e]=/run/media/r3verse/data/Documents/dev/rajya.pdf
-File8[$e]=/run/media/r3verse/data/Documents/dev/lok.pdf
-File9[$e]=$HOME/Downloads/AAYUSHTYAGI_RESUME.pdf
-Name1[$e]=Order_ID_3871077996.pdf
-Name10[$e]=AADHAR v2.pdf
-Name2[$e]=AAYUSHTYAGI_RESUME.pdf
-Name3[$e]=Aayush_Tyagi_Resume.pdf
-Name4[$e]=IdeaPad_5_Pro_16ACH6_Multiple_Model_Specification.pdf
-Name5[$e]=IdeaPad_5_Pro_16ACH6_Spec.pdf
-Name6[$e]=README.md
-Name7[$e]=rajya.pdf
-Name8[$e]=lok.pdf
-Name9[$e]=AAYUSHTYAGI_RESUME.pdf
+File1[$e]=$HOME/Downloads/AAYUSHTYAGI_RESUME.pdf
+Name1[$e]=AAYUSHTYAGI_RESUME.pdf

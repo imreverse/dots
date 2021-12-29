@@ -1,3 +1,7 @@
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAQAAAAMAAAcsAAAAbPwBAAAAAfsAAAASAEMAbwBsAG8AcgAgAEIAbwB4AQAAAFQAAAcsAAACEgEAAAMAAAcsAAADUAAAAAQAAAAEAAAAAQAAAAL8AAAAAgAAAAAAAAABAAAAEABUAG8AbwBsACAAQgBvAHgDAAAAAP////8AAAAAAAAAAAAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABYAdABlAHgAdABUAG8AbwBsAEIAYQByAAAAAu//////AAAAAAAAAAA=
+eDP-1 Window-Maximized 1920x1080=true
+
 [File/Save As]
 Forced Quality=100
 
@@ -11,8 +15,10 @@ Recent URLs[$e]=file:$HOME/Downloads/
 iconViewIconSize=43
 
 [MainWindow]
-State=AAAA/wAAAAD9AAAAAQAAAAMAAAcwAAAAbPwBAAAAAfsAAAASAEMAbwBsAG8AcgAgAEIAbwB4AQAAAFAAAAcwAAACEgEAAAMAAAcwAAADMAAAAAQAAAAEAAAAAQAAAAL8AAAAAgAAAAAAAAABAAAAEABUAG8AbwBsACAAQgBvAHgDAAAAAP////8AAAAAAAAAAAAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABYAdABlAHgAdABUAG8AbwBsAEIAYQByAAAAAu//////AAAAAAAAAAA=
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAQAAAAMAAAcsAAAAbPwBAAAAAfsAAAASAEMAbwBsAG8AcgAgAEIAbwB4AQAAAFQAAAcsAAACEgEAAAMAAAcsAAADUAAAAAQAAAAEAAAAAQAAAAL8AAAAAgAAAAAAAAABAAAAEABUAG8AbwBsACAAQgBvAHgDAAAAAP////8AAAAAAAAAAAAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABYAdABlAHgAdABUAG8AbwBsAEIAYQByAAAAAu//////AAAAAAAAAAA=
 ToolBarsMovable=Disabled
+eDP-1 Window-Maximized 1920x1080=true
 eDP1 Height 1920x1080=1028
 eDP1 Width 1920x1080=1920
 eDP1 Window-Maximized 1920x1080=true
@@ -20,6 +26,7 @@ eDP1 XPosition 1920x1080=0
 eDP1 YPosition 1920x1080=52
 
 [MainWindow][Toolbar Tool Box]
+IconSize=24
 ToolButtonStyle=IconOnly
 
 [MimeType Properties Version 1.2-3]
@@ -27,32 +34,12 @@ Configurable Color Depth=image/png,image/bmp,image/x-pcx,image/x-rgb,image/x-xpi
 Configurable Quality Setting=image/jp2,image/jpeg,image/x-webp
 Maximum Color Depth=image/x-eps:32,image/x-portable-bitmap:1,image/x-portable-graymap:8,image/x-xbitmap:1
 
-[Recent Files]
-File1[$e]=$HOME/Pictures/Flameshot_2021-10-15_00-25-29.png
-File2[$e]=$HOME/Pictures/Flameshot_2021-10-15_16-54-10.png
-File3[$e]=$HOME/Pictures/Flameshot_2021-10-16_01-39-35.png
-File4[$e]=$HOME/Pictures/Flameshot_2021-10-16_01-44-01.png
-File5[$e]=$HOME/Pictures/Flameshot_2021-10-16_01-55-27.png
-File6[$e]=$HOME/Pictures/Flameshot_2021-12-04_05-13-01.png
-File7[$e]=$HOME/Pictures/Flameshot_2021-12-04_05-24-44.png
-File8[$e]=$HOME/Pictures/Flameshot_2021-12-06_02-56-34.png
-File9[$e]=$HOME/Pictures/Flameshot_2021-12-06_03-27-03.png
-Name1[$e]=Flameshot_2021-10-15_00-25-29.png
-Name2[$e]=Flameshot_2021-10-15_16-54-10.png
-Name3[$e]=Flameshot_2021-10-16_01-39-35.png
-Name4[$e]=Flameshot_2021-10-16_01-44-01.png
-Name5[$e]=Flameshot_2021-10-16_01-55-27.png
-Name6[$e]=Flameshot_2021-12-04_05-13-01.png
-Name7[$e]=Flameshot_2021-12-04_05-24-44.png
-Name8[$e]=Flameshot_2021-12-06_02-56-34.png
-Name9[$e]=Flameshot_2021-12-06_03-27-03.png
-
 [Text Settings]
 Bold=true
 Font Size=18
 
 [Tool Settings]
-Last Used Tool=15
+Last Used Tool=7
 Tool Widget Brush Col=0
 Tool Widget Brush Row=0
 Tool Widget Eraser Size Col=0
@@ -65,6 +52,10 @@ Tool Widget Opaque/Transparent Col=0
 Tool Widget Opaque/Transparent Row=1
 Tool Widget Spraycan Size Col=0
 Tool Widget Spraycan Size Row=1
+
+[Toolbar Tool Box]
+IconSize=24
+ToolButtonStyle=IconOnly
 
 [Undo/Redo Settings]
 Max Limit=500

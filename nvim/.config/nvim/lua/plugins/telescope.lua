@@ -58,5 +58,5 @@ require('telescope').setup
   }
 }
 
-vim.api.nvim_set_keymap('n', '<Leader>ff', ':lua require"telescope.builtin".find_files({ hidden = true })<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>fg', ':lua require"telescope.builtin".live_grep({ hidden = true })<CR>', { noremap = true, silent = true })
+map('n', '<Leader>ff', ':lua require"telescope.builtin".find_files({ hidden = true })<CR>', opt)
+map('n', '<Leader>fg', ':lua require"telescope.builtin".live_grep({ hidden = true })<CR>', opt)

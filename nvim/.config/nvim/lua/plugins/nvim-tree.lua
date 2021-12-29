@@ -1,36 +1,36 @@
 vim.g.nvim_tree_highlight_opened_files  = 3
 vim.g.nvim_tree_group_empty = 1
 vim.g.nvim_tree_indent_markers = 1
-vim.api.nvim_set_var('nvim_tree_icons',
-{
-    default = '',
-    symlink = '',
-    git =
-    {
-        unstaged =  "✗",
-        staged =    "✓",
-        unmerged =  "",
-        renamed =   "➜",
-        untracked = "★",
-        deleted =   "",
-        ignored =   "?"
-    },
-    folder =
-    {
-        arrow_open =    "",
-        arrow_closed =  "",
-        default =       "",
-        open =          "",
-        empty =         "",
-        empty_open =    "",
-        symlink =       "",
-        symlink_open =  "",
-    }
-})
+-- vim.api.nvim_set_var('nvim_tree_icons',
+-- {
+--     default = '',
+--     symlink = '',
+--     git =
+--     {
+--         unstaged =  "✗",
+--         staged =    "✓",
+--         unmerged =  "",
+--         renamed =   "➜",
+--         untracked = "★",
+--         deleted =   "",
+--         ignored =   "?"
+--     },
+--     folder =
+--     {
+--         arrow_open =    "",
+--         arrow_closed =  "",
+--         default =       "",
+--         open =          "",
+--         empty =         "",
+--         empty_open =    "",
+--         symlink =       "",
+--         symlink_open =  "",
+--     }
+-- })
 
-vim.api.nvim_set_keymap('n', '<A-e>', ":NvimTreeToggle<CR>:NvimTreeRefresh<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>el', ":NvimTreeFindFile<CR>:NvimTreeRefresh<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>ec', ":lua require'nvim-tree.lib'.collapse_all()<CR>:NvimTreeRefresh<CR>", { noremap = true, silent = true })
+map('n', '<A-e>', ":NvimTreeToggle<CR>:NvimTreeRefresh<CR>", opt)
+map('n', '<Leader>el', ":NvimTreeFindFile<CR>:NvimTreeRefresh<CR>", opt)
+map('n', '<Leader>ec', ":lua require'nvim-tree.lib'.collapse_all()<CR>:NvimTreeRefresh<CR>", opt)
 
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`

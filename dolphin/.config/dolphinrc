@@ -32,6 +32,8 @@ PreviewSize=144
 dateFormat=ShortFormat
 
 [KPropertiesDialog]
+eDP-1 Height 1920x1080=522
+eDP-1 Width 1920x1080=438
 eDP1 Height 1920x1080=446
 eDP1 Width 1920x1080=395
 
@@ -48,6 +50,9 @@ HDMI2 eDP1 YPosition 1920x1080=158
 HDMI2 eDP1 YPosition 3840x2160=220
 MenuBar=Disabled
 ToolBarsMovable=Disabled
+eDP-1 Height 1920x1080=1027
+eDP-1 Width 1920x1080=960
+eDP-1 Window-Maximized 1920x1080=true
 eDP1 HDMI2 Height 1920x1080=1028
 eDP1 HDMI2 Width 1920x1080=1920
 eDP1 HDMI2 Window-Maximized 1920x1080=true
