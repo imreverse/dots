@@ -4,11 +4,11 @@ require'toggleterm'.setup
     start_in_insert = false
 }
 -- todo: Take into account the active split window
-vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<A-t>', ':ToggleTerm<CR>', { noremap = true })
+map('t', '<Esc>', '<C-\\><C-n>', opt)
+map('n', '<A-t>', ':ToggleTerm<CR>', opt)
 
 -- Diff Languages compile and execute
-vim.cmd([[
+cmd([[
 " C++20
 autocmd filetype cpp nnoremap <expr> <Leader>c &buftype ==# 'terminal' ? '<C-w><C-w>:w <bar> TermExec cmd="g++ -std=c++20 -o %:r % -fsanitize=address,undefined -Wshadow -Wall -Wfatal-errors"<CR><C-w><C-w>G' : ':w <bar> TermExec cmd="g++ -std=c++20 -o %:r % -fsanitize=address,undefined -Wshadow -Wall -Wfatal-errors"<CR><C-w><C-w>G<C-w><C-w>'
 autocmd filetype cpp nnoremap <expr> <Leader>x &buftype ==# 'terminal' ? '<C-w><C-w>:TermExec cmd="./%:r"<CR><C-w><C-w>a' : ':TermExec cmd="./%:r"<CR><C-w><C-w>a'

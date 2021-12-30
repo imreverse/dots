@@ -1,0 +1,85 @@
+MenuBar=Disabled
+eDP1 Window-Maximized 1920x1080=true
+
+[CompactMode]
+FontWeight=50
+
+[ContextMenu]
+ShowDuplicateHere=false
+ShowOpenInNewWindow=false
+
+[Desktop Entry]
+DefaultProfile=d3F.profile
+
+[DetailsMode]
+FontWeight=50
+
+[ExtractDialog]
+eDP1 Height 1920x1080=532
+eDP1 Width 1920x1080=1280
+
+[General]
+GlobalViewProps=false
+ShowFullPath=true
+Version=201
+ViewPropsTimestamp=2021,7,22,22,37,24.221
+
+[IconsMode]
+FontWeight=50
+PreviewSize=144
+
+[InformationPanel]
+dateFormat=ShortFormat
+
+[KPropertiesDialog]
+eDP-1 Height 1920x1080=522
+eDP-1 Width 1920x1080=438
+eDP1 Height 1920x1080=446
+eDP1 Width 1920x1080=395
+
+[MainWindow]
+HDMI2 eDP1 Height 1920x1080=692
+HDMI2 eDP1 Height 3840x2160=692
+HDMI2 eDP1 Width 1920x1080=1280
+HDMI2 eDP1 Width 3840x2160=1280
+HDMI2 eDP1 Window-Maximized 1920x1080=true
+HDMI2 eDP1 Window-Maximized 3840x2160=true
+HDMI2 eDP1 XPosition 1920x1080=257
+HDMI2 eDP1 XPosition 3840x2160=2240
+HDMI2 eDP1 YPosition 1920x1080=158
+HDMI2 eDP1 YPosition 3840x2160=220
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+eDP-1 Height 1920x1080=1027
+eDP-1 Width 1920x1080=960
+eDP-1 Window-Maximized 1920x1080=true
+eDP1 HDMI2 Height 1920x1080=1028
+eDP1 HDMI2 Width 1920x1080=1920
+eDP1 HDMI2 Window-Maximized 1920x1080=true
+eDP1 HDMI2 Window-Maximized 3840x2160=true
+eDP1 HDMI2 XPosition 1920x1080=0
+eDP1 HDMI2 YPosition 1920x1080=52
+eDP1 Height 1920x1080=672
+eDP1 Width 1920x1080=1280
+eDP1 Window-Maximized 1920x1080=true
+eDP1 XPosition 1920x1080=0
+eDP1 YPosition 1920x1080=56
+
+[MainWindow][Toolbar mainToolBar]
+IconSize=16
+ToolButtonStyle=IconOnly
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,windowsexethumbnail,windowsimagethumbnail,svgthumbnail
+
+[SettingsDialog]
+eDP1 Height 1920x1080=424
+eDP1 Width 1920x1080=601
+
+[Toolbar mainToolBar]
+IconSize=16
+ToolButtonStyle=IconOnly
+
+[ViewPropertiesDialog]
+eDP1 Height 1920x1080=709
+eDP1 Width 1920x1080=394

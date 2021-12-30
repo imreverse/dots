@@ -1,14 +1,26 @@
 require "bufferline".setup
 {
-    highlights =
-    {
-        buffer_selected =
-        {
-            guifg = normal_fg,
-            guibg = normal_bg,
-            gui = ""
-        },
-    },
+    -- highlights =
+    -- {
+    --     buffer_selected =
+    --     {
+    --         guifg = normal_fg,
+    --         guibg = normal_bg,
+    --         gui = ""
+    --     },
+    --     indicator_selected = {
+    --         guifg =
+    --         {
+    --             attribute = "bg",
+    --             highlight = "Normal"
+    --         },
+    --         guibg =
+    --         {
+    --             attribute = "bg",
+    --             highlight = "Normal"
+    --         }
+    --     }
+    -- },
     options =
     {
         offsets =
@@ -18,13 +30,40 @@ require "bufferline".setup
                 text = "Explorer",
                 highlight = "Directory",
                 text_align = "center"
-                -- filetype = "NERDTree",
-                -- text = "",
+                -- padding = 1
+            },
+            {
+                filetype = "undotree",
+                text = "Undo History",
+                highlight = "Directory",
+                text_align = "center"
+                -- padding = 1
+            },
+            {
+                filetype = "fugitiveblame",
+                text = "Git Blame",
+                highlight = "Directory",
+                text_align = "center"
+                -- padding = 1
+            },
+            {
+                filetype = "packer",
+                text = "Neovim Package Manager",
+                highlight = "Directory",
+                text_align = "center"
+                -- padding = 1
+            },
+            {
+                filetype = "help",
+                text = "Help",
+                highlight = "Directory",
+                text_align = "center"
                 -- padding = 1
             }
         },
+        show_buffer_icons = false,
         buffer_close_icon = "",
-        modified_icon = "",
+        modified_icon = "﯂",
         close_icon = "",
         left_trunc_marker = "",
         right_trunc_marker = "",
@@ -34,26 +73,27 @@ require "bufferline".setup
         show_tab_indicators = true,
         enforce_regular_tabs = false,
         view = "multiwindow",
-        show_buffer_close_icons = true,
+        show_buffer_close_icons = false,
+        show_close_icon = false,
         separator_style = "thin",
     }
 }
 
 -- Goto buffer in position...
-vim.api.nvim_set_keymap('n', '<A-1>', ':BufferLineGoToBuffer 1<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-2>', ':BufferLineGoToBuffer 2<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-3>', ':BufferLineGoToBuffer 3<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-4>', ':BufferLineGoToBuffer 4<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-5>', ':BufferLineGoToBuffer 5<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-6>', ':BufferLineGoToBuffer 6<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-7>', ':BufferLineGoToBuffer 7<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-8>', ':BufferLineGoToBuffer 8<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-9>', ':BufferLast<CR>',   { noremap = true, silent = true })
+map('n', '<A-1>', ':BufferLineGoToBuffer 1<CR>', opt)
+map('n', '<A-2>', ':BufferLineGoToBuffer 2<CR>', opt)
+map('n', '<A-3>', ':BufferLineGoToBuffer 3<CR>', opt)
+map('n', '<A-4>', ':BufferLineGoToBuffer 4<CR>', opt)
+map('n', '<A-5>', ':BufferLineGoToBuffer 5<CR>', opt)
+map('n', '<A-6>', ':BufferLineGoToBuffer 6<CR>', opt)
+map('n', '<A-7>', ':BufferLineGoToBuffer 7<CR>', opt)
+map('n', '<A-8>', ':BufferLineGoToBuffer 8<CR>', opt)
+-- map('n', '<A-9>', ':BufferLast<CR>',   opt)
 -- Quickly move to a buffer with hotkey
-vim.api.nvim_set_keymap('n', '<Leader>b', ':BufferLinePick<CR>', { noremap = true, silent = true })
+map('n', '<Leader>b', ':BufferLinePick<CR>', opt)
 -- Move b/w buffers
-vim.api.nvim_set_keymap('n', '<S-TAB>', ':BufferLineCyclePrev<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<TAB>', ':BufferLineCycleNext<CR>', { noremap = true })
+map('n', '<S-TAB>', ':BufferLineCyclePrev<CR>', opt)
+map('n', '<TAB>', ':BufferLineCycleNext<CR>', opt)
 -- Shift buffers
-vim.api.nvim_set_keymap('n', '<A-S-h>', ':BufferLineMovePrev<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<A-S-l>', ':BufferLineMoveNext<CR>', { noremap = true })
+map('n', '<A-S-h>', ':BufferLineMovePrev<CR>', opt)
+map('n', '<A-S-l>', ':BufferLineMoveNext<CR>', opt)

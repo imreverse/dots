@@ -1,0 +1,63 @@
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAQAAAAMAAAcsAAAAbPwBAAAAAfsAAAASAEMAbwBsAG8AcgAgAEIAbwB4AQAAAFQAAAcsAAACEgEAAAMAAAcsAAADUAAAAAQAAAAEAAAAAQAAAAL8AAAAAgAAAAAAAAABAAAAEABUAG8AbwBsACAAQgBvAHgDAAAAAP////8AAAAAAAAAAAAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABYAdABlAHgAdABUAG8AbwBsAEIAYQByAAAAAu//////AAAAAAAAAAA=
+eDP-1 Window-Maximized 1920x1080=true
+
+[File/Save As]
+Forced Quality=100
+
+[General Settings]
+First Time=false
+Open Images in the Same Window=false
+
+[KFileDialog Settings]
+Recent Files[$e]=WhatsApp Image 2021-08-08 at 21.40.13.jpeg,file:$HOME/Downloads/WhatsApp Image 2021-08-08 at 21.40.13.jpeg
+Recent URLs[$e]=file:$HOME/Downloads/
+iconViewIconSize=43
+
+[MainWindow]
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAQAAAAMAAAcsAAAAbPwBAAAAAfsAAAASAEMAbwBsAG8AcgAgAEIAbwB4AQAAAFQAAAcsAAACEgEAAAMAAAcsAAADUAAAAAQAAAAEAAAAAQAAAAL8AAAAAgAAAAAAAAABAAAAEABUAG8AbwBsACAAQgBvAHgDAAAAAP////8AAAAAAAAAAAAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABYAdABlAHgAdABUAG8AbwBsAEIAYQByAAAAAu//////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+eDP-1 Window-Maximized 1920x1080=true
+eDP1 Height 1920x1080=1028
+eDP1 Width 1920x1080=1920
+eDP1 Window-Maximized 1920x1080=true
+eDP1 XPosition 1920x1080=0
+eDP1 YPosition 1920x1080=52
+
+[MainWindow][Toolbar Tool Box]
+IconSize=24
+ToolButtonStyle=IconOnly
+
+[MimeType Properties Version 1.2-3]
+Configurable Color Depth=image/png,image/bmp,image/x-pcx,image/x-rgb,image/x-xpixmap
+Configurable Quality Setting=image/jp2,image/jpeg,image/x-webp
+Maximum Color Depth=image/x-eps:32,image/x-portable-bitmap:1,image/x-portable-graymap:8,image/x-xbitmap:1
+
+[Text Settings]
+Bold=true
+Font Size=18
+
+[Tool Settings]
+Last Used Tool=7
+Tool Widget Brush Col=0
+Tool Widget Brush Row=0
+Tool Widget Eraser Size Col=0
+Tool Widget Eraser Size Row=2
+Tool Widget Fill Style Col=0
+Tool Widget Fill Style Row=0
+Tool Widget Line Width Col=0
+Tool Widget Line Width Row=4
+Tool Widget Opaque/Transparent Col=0
+Tool Widget Opaque/Transparent Row=1
+Tool Widget Spraycan Size Col=0
+Tool Widget Spraycan Size Row=1
+
+[Toolbar Tool Box]
+IconSize=24
+ToolButtonStyle=IconOnly
+
+[Undo/Redo Settings]
+Max Limit=500
+Max Limit Size Limit=16777216
+Min Limit=10

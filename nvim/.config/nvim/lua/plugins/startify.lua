@@ -1,5 +1,5 @@
 vim.g.startify_files_number = 7
-vim.g.startify_session_dir  = os.getenv("HOME").."/.config/nvim/session"
+vim.g.startify_session_dir  = os.getenv("XDG_DATA_HOME").."/nvim/session"
 vim.g.startify_lists = {
       { type = 'bookmarks', header = {'   Bookmarks'}      },
       { type = 'sessions',  header = {'   Sessions'}       },

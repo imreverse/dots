@@ -30,7 +30,7 @@ alias ls="exa --classify --git --group-directories-first --icons --time-style=lo
 alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
-alias zhist="${EDITOR} ${ZDOTDIR}/.zhistory"
+alias zhist="${EDITOR} ${ZDOTDIR}/.zsh_history"
 alias zshrc="${EDITOR} ${ZDOTDIR}/.zshrc"
 alias zupdate="curl -L git.io/antigen > ${ZDOTDIR}/plugins/antigen.zsh"
 alias logout="loginctl terminate-user ${USER}"
@@ -40,10 +40,12 @@ setopt INC_APPEND_HISTORY
 setopt EXTENDED_HISTORY
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#444444"
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+setopt extendedglob # Use invert ^ for file selection
 
-# Vi Mode
-bindkey -v '^?' backward-delete-char
+# bindkey -v # Vi Mode Not necessary if EDITOR already set
+bindkey -v '^?' backward-delete-char    # Backspace in Vi mode
 bindkey '^[ ' autosuggest-accept
+bindkey '^[l' history-substring-search-up
 bindkey '^[k' history-substring-search-up
 bindkey '^[j' history-substring-search-down
 bindkey '^[[A' history-substring-search-up

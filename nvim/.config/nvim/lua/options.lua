@@ -1,63 +1,61 @@
-local o = vim.opt
-local execute = vim.api.nvim_command
-o.clipboard:append { "unnamedplus" }            -- Set clipboard global linux
-o.guicursor     = ''                            -- Set cursor block default
-o.cursorline    = true
--- o.mouse         = 'n'
-o.undofile      = true                          -- Undofile exists
-o.tabstop       = 4
-o.softtabstop   = 4
-o.shiftwidth    = 4
-o.expandtab     = true
-o.autoindent    = true
-o.number        = true                          -- Show numberline
--- o.relativenumber= true                          -- Relative line [slow]
-o.wrap          = false                         -- No wrapping when size small
-o.splitbelow    = true                          -- Open horizontal split view below
-o.splitright    = true                          -- Open vertical split view right
-o.hidden        = true                          -- Hide buffer when opening new file
-o.scrolloff     = 5                             -- Scroll offset
-o.termguicolors = true                          -- TermGUIcolor
-o.foldmethod    = 'manual'
--- o.foldexpr      = 'nvim_treesitter#foldexpr()'
-o.foldtext      = 'getline(v:foldstart).\'...\'.trim(getline(v:foldend))'
-o.fillchars     = 'fold: '
-o.foldnestmax   = 3
-o.foldminlines  = 1
--- o.foldlevelstart= 99
-o.ignorecase    = true
-o.smartcase     = true
-o.inccommand    = 'nosplit'                     -- Live substitution
+set.clipboard:append { "unnamedplus" }            -- Set clipboard global linux
+set.guicursor     = ''                            -- Set cursor block default
+set.cursorline    = true
+-- set.mouse         = 'n'
+set.undofile      = true                          -- Undofile exists
+set.tabstop       = 4
+set.softtabstop   = 4
+set.shiftwidth    = 4
+set.expandtab     = true
+set.autoindent    = true
+set.number        = true                          -- Show numberline
+-- set.relativenumber= true                          -- Relative line [slow]
+set.wrap          = false                         -- No wrapping when size small
+set.splitbelow    = true                          -- Open horizontal split view below
+set.splitright    = true                          -- Open vertical split view right
+set.hidden        = true                          -- Hide buffer when opening new file
+set.scrolloff     = 5                             -- Scroll offset
+set.termguicolors = true                          -- TermGUIcolor
+set.foldmethod    = 'manual'
+-- set.foldexpr      = 'nvim_treesitter#foldexpr()'
+set.foldtext      = 'getline(v:foldstart).\'...\'.trim(getline(v:foldend))'
+set.fillchars     = 'fold: '
+set.foldnestmax   = 3
+set.foldminlines  = 1
+-- set.foldlevelstart= 99
+set.ignorecase    = true
+set.smartcase     = true
+set.inccommand    = 'nosplit'                     -- Live substitution
 
 -- Show gutter for help files
-vim.api.nvim_command([[
+exe([[
 autocmd FileType help  setlocal number
 ]])
 
-execute('au BufWritePre * %s/\\s\\+$//e')           -- Remove trailing spaces [may not be safe]
-execute('au SwapExists * let v:swapchoice = "o"')   -- If swap exists for a file, open in read-only
+exe('au BufWritePre * %s/\\s\\+$//e')           -- Remove trailing spaces [may not be safe]
+exe('au SwapExists * let v:swapchoice = "o"')   -- If swap exists for a file, open in read-only
 
 -- problemo postponed
--- o.formatoptions = "-=cro"                        -- Disable auto comment on new line
--- o.formatoptions:remove{ "c","r","o" }            -- Disable auto comment on new line
+-- set.formatoptions = "-=cro"                        -- Disable auto comment on new line
+-- set.formatoptions:remove{ "c","r","o" }            -- Disable auto comment on new line
 
--- o.formatoptions = o.formatoptions:remove('c','')
--- o.formatoptions = o.formatoptions:remove('r','')
--- o.formatoptions = o.formatoptions:remove('o','')
--- o.formatoptions = o.formatoptions - 'r'
--- o.formatoptions = o.formatoptions - 'o'
--- o.fo:remove { "cro", "r", "o" }
--- vim.api.nvim_command([[
+-- set.formatoptions = set.formatoptions:remove('c','')
+-- set.formatoptions = set.formatoptions:remove('r','')
+-- set.formatoptions = set.formatoptions:remove('o','')
+-- set.formatoptions = set.formatoptions - 'r'
+-- set.formatoptions = set.formatoptions - 'o'
+-- set.fo:remove { "cro", "r", "o" }
+-- exe([[
 -- augroup AutoCompileLatex
 -- setlocal fo-=cro
 -- augroup END
 -- ]])
--- vim.api.nvim_command([[
+-- exe([[
 -- autocmd filetype * set fo-=cro
 -- ]])
--- vim.api.nvim_command('autocmd filetype * set fo-=c fo-=r fo-=o') -- disable auto comment insertion
--- vim.api.nvim_command('au filetype * set fo-=cro') -- disable auto comment insertion
--- vim.api.nvim_command('au filetype * o.fo:remove { "c", "r", "o" }') -- disable auto comment insertion
+-- exe('autocmd filetype * set fo-=c fo-=r fo-=o') -- disable auto comment insertion
+-- exe('au filetype * set fo-=cro') -- disable auto comment insertion
+-- exe('au filetype * set.fo:remove { "c", "r", "o" }') -- disable auto comment insertion
 -- -- au filetype * set fo-=c fo-=r fo-=o "disable auto comment insertion
 -- TODO find a new home for these autocommands
 require('lv-utils').define_augroups({

@@ -3,7 +3,7 @@ local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
     fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.api.nvim_command 'packadd packer.nvim'
+    exe 'packadd packer.nvim'
 end
 
 -- Plugins
@@ -11,10 +11,29 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'                        -- Plugin manager
     use
     {
+        'projekt0n/circles.nvim',
+        config = function() require('plugins.circles') end
+    }
+    use
+    {
         'kyazdani42/nvim-web-devicons',
         config = function() require('plugins.nvim-web-devicons') end
     }
-    use 'folke/tokyonight.nvim'                         -- Colorscheme
+    -- use 'folke/tokyonight.nvim'                         -- Colorscheme
+    -- use 'projekt0n/github-nvim-theme'
+    -- use 'catppuccin/nvim'
+    -- use 'bluz71/vim-moonfly-colors'
+    -- use 'sickill/vim-monokai'
+    -- use 'sainnhe/sonokai'
+    -- use 'shaunsingh/nord.nvim'
+    -- use 'arcticicestudio/nord-vim'
+    -- use 'sjl/badwolf'
+    use 'ful1e5/onedark.nvim'
+    use
+    {
+        'ellisonleao/gruvbox.nvim',
+        requires = 'rktjmp/lush.nvim'
+    }
     use
     {
         'mhinz/vim-startify',                           -- Dashboard
@@ -27,15 +46,17 @@ return require('packer').startup(function()
         config = function() require('plugins.lualine') end
     }
     -- Bufferline no animations
-    -- Barbar colorscheme bad
     -- Barbar offset bad
-    -- Barbar buffer ordering messed up
     use
     {
         'akinsho/nvim-bufferline.lua',                  -- Bufferline
         config = function() require('plugins.bufferline') end
     }
-    -- use 'romgrk/barbar.nvim'
+    -- use
+    -- {
+    --     'romgrk/barbar.nvim',
+    --     config = function() require('plugins.barbar') end
+    -- }
     use
     {
         'nvim-treesitter/nvim-treesitter',              -- Treesitter

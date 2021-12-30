@@ -42,12 +42,12 @@ end
 -- end
 
 -- KEY MAPPINGS
-vim.api.nvim_set_keymap("i", "<TAB>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<TAB>", "v:lua.tab_complete()", {expr = true})
--- vim.api.nvim_set_keymap("i", "<S-TAB>", "v:lua.s_tab_complete()", {expr = true})
--- vim.api.nvim_set_keymap("s", "<S-TAB>", "v:lua.s_tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("i", "<C-E>", "<Plug>luasnip-next-choice", {})
-vim.api.nvim_set_keymap("s", "<C-E>", "<Plug>luasnip-next-choice", {})
+map("i", "<TAB>", "v:lua.tab_complete()", {expr = true})
+map("s", "<TAB>", "v:lua.tab_complete()", {expr = true})
+-- map("i", "<S-TAB>", "v:lua.s_tab_complete()", {expr = true})
+-- map("s", "<S-TAB>", "v:lua.s_tab_complete()", {expr = true})
+map("i", "<C-E>", "<Plug>luasnip-next-choice", {})
+map("s", "<C-E>", "<Plug>luasnip-next-choice", {})
 
 -- SNIPPETS
 local ls = require "luasnip"

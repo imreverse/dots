@@ -1,5 +1,4 @@
 .zcompdump
-.zhistory
 .zsh_history
 .zshrc.zwc
 plugins/antigen.zsh
