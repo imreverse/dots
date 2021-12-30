@@ -1,0 +1,24 @@
+. $(brew --prefix asdf)/asdf.sh
+
+. /usr/local/opt/asdf/asdf.sh
+
+export MAVEN_OPTS="-Xmx4096m"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-11.jdk/Contents/Home"
+export RABBITMQ=$PATH:/usr/local/sbin
+alias java8='export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"'
+alias java11='export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-11.jdk/Contents/Home"'
+
+. ~/.asdf/plugins/java/set-java-home.bash
+export PATH=$PATH:$JAVA_HOME/bin
+
+#hogan config
+# example use
+# hg template.yaml prod
+# prereq: ~/hogan-configs should be cloned from stash
+hg() { hogan transform --configs ~/hogan-configs --templates . --templates-filter "$1" --environments-filter "$2"; }
+
+# NVM Configs
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
