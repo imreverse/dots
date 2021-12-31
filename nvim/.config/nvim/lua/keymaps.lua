@@ -3,6 +3,8 @@ cmd('cnoreabbrev PC PackerClean')
 cmd('cnoreabbrev PI PackerInstall')
 cmd('cnoreabbrev PS PackerSync')
 
+vim.g.mapleader = " "
+
 -- Function{} code fold
 map('n', 'zc', 'zfa{', { noremap = true })
 
