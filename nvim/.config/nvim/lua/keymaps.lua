@@ -32,22 +32,22 @@ map('n', '<C-a>', 'ggVG', { noremap = true })
 map('i', '<C-a>', '<ESC>ggVG', { noremap = true })
 
 -- Move b/w splits
-map('n', '<A-h>', '<C-w>h', { noremap = true })
-map('n', '<A-j>', '<C-w>j', { noremap = true })
-map('n', '<A-k>', '<C-w>k', { noremap = true })
-map('n', '<A-l>', '<C-w>l', { noremap = true })
+map('n', '<Leader>h', '<C-w>h', { noremap = true })
+map('n', '<Leader>j', '<C-w>j', { noremap = true })
+map('n', '<Leader>k', '<C-w>k', { noremap = true })
+map('n', '<Leader>l', '<C-w>l', { noremap = true })
 
 -- Resize Splits
-map('n', '<C-h>', ':vert resize -2<CR>', { noremap = true, silent = true })
-map('n', '<C-l>', ':vert resize +2<CR>', { noremap = true, silent = true })
-map('n', '<C-j>', ':resize -1<CR>', { noremap = true, silent = true })
-map('n', '<C-k>', ':resize +1<CR>', { noremap = true, silent = true })
+map('n', '<A-h>', ':vert resize -2<CR>', { noremap = true, silent = true })
+map('n', '<A-l>', ':vert resize +2<CR>', { noremap = true, silent = true })
+map('n', '<A-j>', ':resize -1<CR>', { noremap = true, silent = true })
+map('n', '<A-k>', ':resize +1<CR>', { noremap = true, silent = true })
 
 -- Change working directory to current file's directory
 -- map('n', '<Leader>da', ':cd %:p:h<CR>', { noremap = true })
 -- map('n', '<Leader>cd', ':lcd %:p:h | NERDTreeCWD<CR>', { noremap = true })
-
-map('n', '<Leader>vv', ':e $HOME/.config/nvim/init.lua<CR>', { noremap = true })
+-- Unnecessary
+-- map('n', '<Leader>vv', ':e $HOME/.config/nvim/init.lua<CR>', { noremap = true })
 
 cmd('cnoreabbrev H vert h')
 -- cnoreabbrev H vert h
