@@ -10,6 +10,15 @@
 #   ░ ░          ░   ░  ░  ░   ░     ░ ░
 # ░                                  ░
 #
+# TODO
+# Add .zshenv to git too
+# Find a way to Shift+Tab through choices
+# Look into https://github.com/kutsan/zsh-system-clipboard
+# Look into https://github.com/jeffreytse/zsh-vi-mode
+# https://thevaluable.dev/zsh-install-configure-mouseless/
+# Look into the error in which I get cannot find file ~/.zshrc
+# Add antigen curl command if antigen isn't already downloaded
+# Find a way to do invert selection in CLI
 
 
 # Source

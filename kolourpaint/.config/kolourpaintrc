@@ -34,6 +34,16 @@ Configurable Color Depth=image/png,image/bmp,image/x-pcx,image/x-rgb,image/x-xpi
 Configurable Quality Setting=image/jp2,image/jpeg,image/x-webp
 Maximum Color Depth=image/x-eps:32,image/x-portable-bitmap:1,image/x-portable-graymap:8,image/x-xbitmap:1
 
+[Recent Files]
+File1[$e]=$HOME/Pictures/2021-12-31_04-45.png
+File2[$e]=$HOME/Pictures/2021-12-31_04-46.png
+File3[$e]=$HOME/Pictures/2021-12-31_04-47.png
+File4[$e]=$HOME/Pictures/2021-12-31_04-47_1.png
+Name1[$e]=2021-12-31_04-45.png
+Name2[$e]=2021-12-31_04-46.png
+Name3[$e]=2021-12-31_04-47.png
+Name4[$e]=2021-12-31_04-47_1.png
+
 [Text Settings]
 Bold=true
 Font Size=18
