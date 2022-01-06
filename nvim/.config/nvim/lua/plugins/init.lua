@@ -28,7 +28,7 @@ return require('packer').startup(function()
     -- use 'shaunsingh/nord.nvim'
     -- use 'arcticicestudio/nord-vim'
     -- use 'sjl/badwolf'
-    -- use 'ful1e5/onedark.nvim'
+    use 'ful1e5/onedark.nvim'
     -- use
     -- {
     --     'ellisonleao/gruvbox.nvim',
