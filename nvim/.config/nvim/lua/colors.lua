@@ -3,13 +3,14 @@
 -- cmd[[colorscheme molokai]]
 
 -- OneDark
-require('onedark').setup()
+-- require('onedark').setup()
 
 -- TokyoNight
 -- vim.g.tokyonight_style = "day"
 -- vim.g.tokyonight_style = "night"
+vim.g.tokyonight_style = "dark"
 -- vim.g.tokyonight_transparent = true
--- cmd[[colorscheme tokyonight]]
+cmd[[colorscheme tokyonight]]
 
 -- Github
 -- require('github-theme').setup({
