@@ -28,7 +28,8 @@ require('telescope').setup
         },
         vertical =
         {
-            mirror = false,
+            mirror = true,
+            prompt_position = 'top'
         },
     },
     file_sorter =  require'telescope.sorters'.get_fuzzy_file,
@@ -58,5 +59,5 @@ require('telescope').setup
   }
 }
 
-map('n', '<Leader>ff', ':lua require"telescope.builtin".find_files({ hidden = true })<CR>', opt)
+map('n', '<Leader>ff', ':lua require"telescope.builtin".find_files({ hidden = true, layout_strategy = \'vertical\',  })<CR>', opt)
 map('n', '<Leader>fg', ':lua require"telescope.builtin".live_grep({ hidden = true })<CR>', opt)

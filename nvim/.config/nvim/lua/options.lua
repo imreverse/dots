@@ -14,7 +14,7 @@ set.wrap          = false                         -- No wrapping when size small
 set.splitbelow    = true                          -- Open horizontal split view below
 set.splitright    = true                          -- Open vertical split view right
 set.hidden        = true                          -- Hide buffer when opening new file
-set.scrolloff     = 5                             -- Scroll offset
+-- set.scrolloff     = 5                             -- Scroll offset
 set.termguicolors = true                          -- TermGUIcolor
 set.foldmethod    = 'manual'
 -- set.foldexpr      = 'nvim_treesitter#foldexpr()'
@@ -26,6 +26,12 @@ set.foldminlines  = 1
 set.ignorecase    = true
 set.smartcase     = true
 set.inccommand    = 'nosplit'                     -- Live substitution
+-- set.t_ZH          = '^[[3m'
+-- set.t_ZR          = '^[[23m'
+cmd[[
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+]]
 
 -- Show gutter for help files
 exe([[

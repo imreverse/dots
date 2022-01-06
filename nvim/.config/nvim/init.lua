@@ -10,6 +10,7 @@
 -- Try nvim lsp
 -- Nvim Telescope search for only files with exact name
 -- Nvim Telescope remember search history and maintain order
+-- Nvim Telescope scroll through the previewer?
 -- Code folding inside a particular scope (workaround)
 -- Jump back in history using alt+[ and fwd alt+]
 -- Keep search query for diff buffer separate
@@ -24,6 +25,7 @@
 -- Some examples, Search Replace, Hunk Restore
 -- Modify hunk movement because of leader h conflict
 -- Better splits movement (sometimes I see opposite behav)
+-- Modify lualine color theme to be based on background
 
 -- Shorthands used in this repo
 map = vim.api.nvim_set_keymap
