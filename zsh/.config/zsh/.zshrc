@@ -34,6 +34,12 @@ antigen apply
 ## P10K
 [[ ! -f ${ZDOTDIR}/plugins/p10k.zsh ]] || source ${ZDOTDIR}/plugins/p10k.zsh
 
+# Execute tmux when opening terminal
+# Ref: unix.stackexchange.com/questions/43601
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+    exec tmux new-session -A -s meow
+fi
+
 # Aliases
 alias ls="exa --classify --git --group-directories-first --icons --time-style=long-iso -lhTL1"
 alias grep="grep --color=auto"
