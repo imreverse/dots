@@ -64,5 +64,3 @@ bindkey '^[[B' history-substring-search-down
 zstyle :compinstall filename "${ZDOTDIR}/.zshrc"
 autoload -Uz compinit; compinit
 # End of lines added by compinstall
-
-source "${ZDOTDIR}/.zshrc-mac"
