@@ -19,7 +19,7 @@ return require('packer').startup(function()
         'kyazdani42/nvim-web-devicons',
         config = function() require('plugins.nvim-web-devicons') end
     }
-    use 'folke/tokyonight.nvim'                         -- Colorscheme
+    -- use 'folke/tokyonight.nvim'                         -- Colorscheme
     -- use 'projekt0n/github-nvim-theme'
     -- use 'catppuccin/nvim'
     -- use 'bluz71/vim-moonfly-colors'
@@ -28,7 +28,10 @@ return require('packer').startup(function()
     -- use 'shaunsingh/nord.nvim'
     -- use 'arcticicestudio/nord-vim'
     -- use 'sjl/badwolf'
-    use 'ful1e5/onedark.nvim'
+    -- use 'ful1e5/onedark.nvim'
+    -- use 'dracula/vim'
+    use 'rebelot/kanagawa.nvim'
+    -- use 'Mofiqul/dracula.nvim'
     -- use
     -- {
     --     'ellisonleao/gruvbox.nvim',
@@ -62,7 +65,22 @@ return require('packer').startup(function()
         'nvim-treesitter/nvim-treesitter',              -- Treesitter
         config = function() require('plugins.nvim-treesitter') end
     }
-    -- use 'neovim/nvim-lspconfig'                      -- LSP
+    use
+    {
+        'L3MON4D3/LuaSnip',                             -- Snippet manager
+        config = function() require('plugins.luasnip') end
+    }
+    -- use
+    -- {
+    --     'hrsh7th/nvim-cmp',
+    --     requires = {{'hrsh7th/cmp-nvim-lsp','saadparwaiz1/cmp_luasnip'}},
+    --     config = function() require('plugins.nvim-cmp') end
+    -- }
+    use
+    {
+        'neovim/nvim-lspconfig',                        -- LSP
+        config = function() require('plugins.nvim-lspconfig') end
+    }
     use
     {
         'lukas-reineke/indent-blankline.nvim',          -- Indent lines
@@ -93,11 +111,6 @@ return require('packer').startup(function()
     }
     use
     {
-        'L3MON4D3/LuaSnip',                             -- Snippet manager
-        config = function() require('plugins.luasnip') end
-    }
-    use
-    {
         'b3nj5m1n/kommentary',                          -- Comments handler
         config = function() require('plugins.kommentary') end
     }
@@ -111,5 +124,10 @@ return require('packer').startup(function()
         'lewis6991/gitsigns.nvim',                      -- Git line changes
         requires = {{'nvim-lua/plenary.nvim'}},
         config = function() require('plugins.gitsigns') end
+    }
+    use
+    {
+        'simrat39/symbols-outline.nvim',                -- Function Outline
+        config = function() require('plugins.outline') end
     }
 end)

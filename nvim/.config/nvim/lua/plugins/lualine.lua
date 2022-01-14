@@ -79,10 +79,6 @@ local function getPos()
     return 'Ln '..currentLn..'/'..totalLn..' Col '..currentCol
 end
 
-local function gitBlameText()
-    return 'Git Blame'
-end
-
 local function readOnly()
     if vim.bo.modifiable == false or vim.bo.readonly == true then
         return 'READ ONLY'
@@ -142,6 +138,9 @@ local helpSection =
     filetypes = {'help'}
 }
 
+local function gitBlameText()
+    return 'Git Blame'
+end
 local gitBlame =
 {
     sections =
@@ -158,6 +157,43 @@ local gitBlame =
     filetypes = {'fugitiveblame'}
 }
 
+local function symbolsOutlineText()
+    return 'Outline'
+end
+local symbolsOutline =
+{
+    sections =
+    {
+        lualine_z =
+        {
+            {
+                symbolsOutlineText,
+                separator = { left = rightSecSep, right = leftSecSep },
+                padding = 1
+            }
+        }
+    },
+    filetypes = {'Outline'}
+}
+
+local function packerText()
+    return 'Packer'
+end
+local packer =
+{
+    sections =
+    {
+        lualine_z =
+        {
+            {
+                packerText,
+                separator = { left = rightSecSep, right = leftSecSep },
+                padding = 1
+            }
+        }
+    },
+    filetypes = {'packer'}
+}
 require'lualine'.setup
 {
     options =
@@ -204,21 +240,29 @@ require'lualine'.setup
         },
         lualine_x =
         {
-            {readOnly},
             {
-                -- 'diagnostics',
-                -- -- table of diagnostic sources, available sources:
-                -- -- nvim_lsp, coc, ale, vim_lsp
-                -- sources = nil,
-                -- -- displays diagnostics from defined severity
-                -- sections = {'error', 'warn', 'info', 'hint'},
-                -- -- all colors are in format #rrggbb
-                -- color_error = nil, -- changes diagnostic's error foreground color
-                -- color_warn = nil, -- changes diagnostic's warn foreground color
-                -- color_info = nil, -- Changes diagnostic's info foreground color
-                -- color_hint = nil, -- Changes diagnostic's hint foreground color
-                -- symbols = {error = 'E', warn = 'W', info = 'I', hint = 'H'}
-            }
+                'diagnostics',
+                -- table of diagnostic sources, available sources:
+                -- nvim_lsp, coc, ale, vim_lsp
+                sources = { 'nvim_lsp' },
+                -- displays diagnostics from defined severity
+                sections = {'error', 'warn', 'info', 'hint'},
+                -- Displays diagnostics for the defined severity types
+                sections = { 'error', 'warn', 'info', 'hint' },
+
+                diagnostics_color = {
+                    -- Same values as the general color option can be used here.
+                    error = 'DiagnosticError', -- Changes diagnostics' error color.
+                    warn  = 'DiagnosticWarn',  -- Changes diagnostics' warn color.
+                    info  = 'DiagnosticInfo',  -- Changes diagnostics' info color.
+                    hint  = 'DiagnosticHint',  -- Changes diagnostics' hint color.
+                },
+                symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '},
+                colored = true,           -- Displays diagnostics status in color if set to true.
+                update_in_insert = false, -- Update diagnostics in insert mode.
+                always_visible = true,   -- Show diagnostics even if there are none.
+            },
+            {readOnly}
         },
         lualine_y = {{getPos}},
         lualine_z =
@@ -243,5 +287,6 @@ require'lualine'.setup
         lualine_z = {}
     },
     tabline = {},
-    extensions = { 'fugitive', 'nvim-tree', 'toggleterm', helpSection, gitBlame }
+    extensions = { 'fugitive', 'nvim-tree', 'toggleterm', helpSection, gitBlame, symbolsOutline, packer }
+    -- echo &ft to get filetype (case-sensitive)
 }

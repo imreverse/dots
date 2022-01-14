@@ -25,6 +25,7 @@ set.foldminlines  = 1
 -- set.foldlevelstart= 99
 set.ignorecase    = true
 set.smartcase     = true
+set.signcolumn    = 'yes'
 set.inccommand    = 'nosplit'                     -- Live substitution
 -- set.t_ZH          = '^[[3m'
 -- set.t_ZR          = '^[[23m'

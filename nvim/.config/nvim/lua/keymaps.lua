@@ -31,11 +31,11 @@ map('n', 'c', '\"_c', { noremap = true })
 map('n', '<C-a>', 'ggVG', { noremap = true })
 map('i', '<C-a>', '<ESC>ggVG', { noremap = true })
 
--- Move b/w splits
-map('n', '<Leader>h', '<C-w>h', { noremap = true })
-map('n', '<Leader>j', '<C-w>j', { noremap = true })
-map('n', '<Leader>k', '<C-w>k', { noremap = true })
-map('n', '<Leader>l', '<C-w>l', { noremap = true })
+-- Move b/w splits -- Better use CTRL-W instead
+-- map('n', '<Leader>h', '<C-w>h', { noremap = true })
+-- map('n', '<Leader>j', '<C-w>j', { noremap = true })
+-- map('n', '<Leader>k', '<C-w>k', { noremap = true })
+-- map('n', '<Leader>l', '<C-w>l', { noremap = true })
 
 -- Resize Splits
 map('n', '<A-h>', ':vert resize -2<CR>', { noremap = true, silent = true })

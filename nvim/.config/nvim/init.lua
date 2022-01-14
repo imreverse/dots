@@ -7,10 +7,14 @@
 --  ╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
 -------------------------------------------------------
 -- TODO
--- Try nvim lsp
+--
+-- Look into why undo history is messed up (LSP? Treesitter?)
+-- Add LSP server configs for other most used languages
+-- Configure directory where lsp data should be stored
 -- Nvim Telescope search for only files with exact name
 -- Nvim Telescope remember search history and maintain order
 -- Nvim Telescope scroll through the previewer?
+-- Nvim Telescope for snippets
 -- Code folding inside a particular scope (workaround)
 -- Jump back in history using alt+[ and fwd alt+]
 -- Keep search query for diff buffer separate
@@ -23,9 +27,11 @@
 -- Check this out: stackoverflow.com/questions/37552913
 -- Watchout for extensions with popup (nui.nvim)
 -- Some examples, Search Replace, Hunk Restore
--- Modify hunk movement because of leader h conflict
 -- Better splits movement (sometimes I see opposite behav)
 -- Modify lualine color theme to be based on background
+-- Look into mfussenegger/nvim-dap
+-- Use custom background color for lualine lsp
+-- Watchout when the new virtual_text off for LSP works
 
 -- Shorthands used in this repo
 map = vim.api.nvim_set_keymap
