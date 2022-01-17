@@ -66,6 +66,8 @@ bindkey '^[j' history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+source "${ZDOTDIR}/.zshrc-mac"
+
 # The following lines were added by compinstall
 zstyle :compinstall filename "${ZDOTDIR}/.zshrc"
 autoload -Uz compinit; compinit
