@@ -1,4 +1,4 @@
-map('n', '<Leader>so', ":SymbolsOutline<CR>", opt)
+map('n', '<Leader>so', ":SymbolsOutline<CR>", nosil)
 
 vim.g.symbols_outline =
 {

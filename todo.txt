@@ -1,0 +1,37 @@
+TODO list of things related to Linux apart from configs:
+
+1. Report bug/solve tile-gaps kde wayland (i think) bug
+    a. Learn kwin scripting (develop.kde.org/docs/plasma/kwin)
+
+2. Setup keepassXC cloud sync (automate after file change)
+    a. Also look into how to avoid merge conflicts
+    Ex: let's suppose keepass client on Android updates the db, but cannot sync with remote (home) server, and while at
+        it, keepass linux client also updates the file. How would one resolve such a conflict? Look into this.
+
+3. Read about GNU Privacy Guard
+
+4. Learn about different licenses and the need for them (GPLv3?)
+
+5. Setup timeshift (btrfs) when reinstalling endeavour next time
+
+6. Learn more about GREP, AWK, regex
+
+7. Read https://github.com/alex/what-happens-when
+
+8. Create a program that will be able to generate a group-wise classification of programs which are currently installed.
+
+9. Learn about the use of alt and ctrl keys on keyboard?
+
+10. How to issue a command to execute after current command currently running. Like updating, and i wanna reboot.
+
+11. Look into lights which automatically switches on? and maybe a calm music too? Meh?
+
+12. Learn more about different git features
+
+13. Read about CICD
+
+14. OOP, NETWORKS, DBMS, OS
+
+15. What are cookies? How is data privacy related? And EUDC?
+
+16. Get package recommendation when wrong command has been entered pacman

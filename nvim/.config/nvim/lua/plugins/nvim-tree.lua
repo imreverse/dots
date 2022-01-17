@@ -28,9 +28,21 @@ vim.g.nvim_tree_indent_markers = 1
 --     }
 -- })
 
-map('n', '<A-e>', ":NvimTreeToggle<CR>:NvimTreeRefresh<CR>", opt)
-map('n', '<Leader>el', ":NvimTreeFindFile<CR>:NvimTreeRefresh<CR>", opt)
-map('n', '<Leader>ec', ":lua require'nvim-tree.lib'.collapse_all()<CR>:NvimTreeRefresh<CR>", opt)
+cmd("highlight NvimTreeExecFile guifg='#f8f8f2'")
+
+vim.g.nvim_tree_icons = {
+    default = "",
+}
+
+map('n', '<A-e>', ":NvimTreeToggle<CR>:NvimTreeRefresh<CR>", nosil)
+map('n', '<Leader>el', ":NvimTreeFindFile<CR>:NvimTreeRefresh<CR>", nosil)
+map('n', '<Leader>ec', ":lua require'nvim-tree.lib'.collapse_all()<CR>:NvimTreeRefresh<CR>", nosil)
+
+local prev = "require'nvim-tree'.on_keypress('preview')"
+local refr = "require'nvim-tree'.on_keypress('refresh')"
+local edit = "require'nvim-tree'.on_keypress('edit')"
+local refreshThenEdit = ":lua "..prev.." "..refr.." "..edit.."<CR>"
+local prevAndThenRefr = ":lua "..prev.." "..refr.."<CR>"
 
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
@@ -42,7 +54,7 @@ require'nvim-tree'.setup {
     auto_close          = false,
     open_on_tab         = false,
     hijack_cursor       = false,
-    update_cwd          = false,
+    update_cwd          = true,
     update_to_buf_dir   =
     {
         enable = true,
@@ -50,13 +62,13 @@ require'nvim-tree'.setup {
     },
     diagnostics =
     {
-        enable = false,
+        enable = true,
         icons =
         {
-            hint =      "",
+            hint =      "",
             info =      "",
             warning =   "",
-            error =     "",
+            error =     "",
         }
     },
     update_focused_file =
@@ -91,10 +103,15 @@ require'nvim-tree'.setup {
         mappings =
         {
             custom_only = false,
-            list = {}
+            list =
+            {
+                { key = {"<CR>", "o", "<2-LeftMouse>"}, cb = refreshThenEdit, mode = "n" },
+                { key = {"<TAB>"}, cb = prevAndThenRefr, mode = "n" }
+            }
         },
         number = false,
-        relativenumber = false
+        relativenumber = false,
+        signcolumn = "yes"
     },
     trash =
     {

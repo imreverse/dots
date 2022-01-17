@@ -9,34 +9,27 @@ end
 -- Plugins
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'                        -- Plugin manager
-    use
-    {
-        'projekt0n/circles.nvim',
-        config = function() require('plugins.circles') end
-    }
+    -- use
+    -- {
+    --     'projekt0n/circles.nvim',
+    --     config = function() require('plugins.circles') end
+    -- }
     use
     {
         'kyazdani42/nvim-web-devicons',
         config = function() require('plugins.nvim-web-devicons') end
     }
-    -- use 'folke/tokyonight.nvim'                         -- Colorscheme
+
+    -- use 'catppuccin/nvim'                               -- Colorschemes
+    use 'dracula/vim'
     -- use 'projekt0n/github-nvim-theme'
-    -- use 'catppuccin/nvim'
-    -- use 'bluz71/vim-moonfly-colors'
-    -- use 'sickill/vim-monokai'
-    -- use 'sainnhe/sonokai'
+    -- use 'ellisonleao/gruvbox.nvim'
     -- use 'shaunsingh/nord.nvim'
-    -- use 'arcticicestudio/nord-vim'
-    -- use 'sjl/badwolf'
     -- use 'ful1e5/onedark.nvim'
-    -- use 'dracula/vim'
-    use 'rebelot/kanagawa.nvim'
-    -- use 'Mofiqul/dracula.nvim'
-    -- use
-    -- {
-    --     'ellisonleao/gruvbox.nvim',
-    --     requires = 'rktjmp/lush.nvim'
-    -- }
+    use 'olimorris/onedarkpro.nvim'
+    -- use 'sainnhe/sonokai'
+    -- use 'folke/tokyonight.nvim'
+
     use
     {
         'mhinz/vim-startify',                           -- Dashboard
@@ -48,6 +41,7 @@ return require('packer').startup(function()
         'nvim-lualine/lualine.nvim',                    -- Statusline
         config = function() require('plugins.lualine') end
     }
+    use 'JoosepAlviste/nvim-ts-context-commentstring'
     -- Bufferline no animations
     -- Barbar offset bad
     use
@@ -129,5 +123,29 @@ return require('packer').startup(function()
     {
         'simrat39/symbols-outline.nvim',                -- Function Outline
         config = function() require('plugins.outline') end
+    }
+    use
+    {
+        "benfowler/telescope-luasnip.nvim"
+    }
+    use
+    {
+        'norcalli/nvim-colorizer.lua',
+        config = function() require'colorizer'.setup() end
+    }
+    use
+    {
+        'folke/trouble.nvim',
+        config = function() require'trouble'.setup() end
+    }
+    use
+    {
+        'karb94/neoscroll.nvim',
+        config = function() require('plugins.neoscroll') end
+    }
+    use
+    {
+        'petertriho/nvim-scrollbar',
+        config = function() require('plugins.nvim-scrollbar') end
     }
 end)

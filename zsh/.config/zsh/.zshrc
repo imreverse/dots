@@ -16,6 +16,11 @@
 # Look into https://github.com/jeffreytse/zsh-vi-mode
 # https://thevaluable.dev/zsh-install-configure-mouseless/
 # Find a way to do invert file selection in CLI
+# Alt+L/K should only accept command from history which starts with current
+#   substring, not any substring matching current string
+#   Ex: pnpm install is a substring in another command git clean -fdX && pnpm install
+#   So, using pnpm in... and doing alt+K/L should not use git command
+# Use .zshenv inside ZDOTDIR
 
 
 # Source Antigen

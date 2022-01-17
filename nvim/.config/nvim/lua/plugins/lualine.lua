@@ -219,7 +219,7 @@ require'lualine'.setup
             'branch',
             {
                 'diff',
-                colored = false, -- displays diff status in color if set to true
+                colored = true, -- displays diff status in color if set to true
                 -- -- all colors are in format #rrggbb
                 -- diff_color =
                 -- {
@@ -272,7 +272,7 @@ require'lualine'.setup
                 fmt = string.upper,
                 colored = false,
                 separator = { left = rightSecSep, right = leftSecSep },
-                icons_enabled = false,
+                icons_enabled = true,
                 padding = 1
             }
         }

@@ -4,8 +4,8 @@ require'toggleterm'.setup
     start_in_insert = false
 }
 -- todo: Take into account the active split window
-map('t', '<Esc>', '<C-\\><C-n>', opt)
-map('n', '<A-t>', ':ToggleTerm<CR>', opt)
+map('t', '<Esc>', '<C-\\><C-n>', nosil)
+map('n', '<A-t>', ':ToggleTerm<CR>', nosil)
 
 -- Diff Languages compile and execute
 cmd([[
