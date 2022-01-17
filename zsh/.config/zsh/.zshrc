@@ -11,17 +11,24 @@
 # ░                                  ░
 #
 # TODO
-# Add .zshenv to git too
-# Find a way to Shift+Tab through choices
-# Look into https://github.com/kutsan/zsh-system-clipboard
+# !! WHY I'M UNABLE TO LOAD PLUGINS??
+# Not working kutsan/zsh-system-clipboard, instead create own paste method
 # Look into https://github.com/jeffreytse/zsh-vi-mode
 # https://thevaluable.dev/zsh-install-configure-mouseless/
-# Look into the error in which I get cannot find file ~/.zshrc
-# Add antigen curl command if antigen isn't already downloaded
-# Find a way to do invert selection in CLI
+# Find a way to do invert file selection in CLI
+# Alt+L/K should only accept command from history which starts with current
+#   substring, not any substring matching current string
+#   Ex: pnpm install is a substring in another command git clean -fdX && pnpm install
+#   So, using pnpm in... and doing alt+K/L should not use git command
+# Use .zshenv inside ZDOTDIR
 
 
-# Source
+# Source Antigen
+if ! [ -e ${ZDOTDIR}/plugins/antigen.zsh ]
+then
+    curl -L git.io/antigen > ${ZDOTDIR}/plugins/antigen.zsh
+    echo 'Antigen Downloaded'
+fi
 source "${ZDOTDIR}/plugins/antigen.zsh"
 
 # Plugins
@@ -29,10 +36,23 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle jeffreytse/zsh-vi-mode
+# antigen bundle kutsan/zsh-system-clipboard
 antigen theme romkatv/powerlevel10k
 antigen apply
 ## P10K
 [[ ! -f ${ZDOTDIR}/plugins/p10k.zsh ]] || source ${ZDOTDIR}/plugins/p10k.zsh
+
+# typeset -g ZSH_SYSTEM_CLIPBOARD_USE_WL_CLIPBOARD='true'
+
+
+# Yank to the system clipboard
+function vi-yank-help {
+    zle vi-yank
+    echo "$CUTBUFFER" | wl-copy
+}
+zle -N vi-yank-help
+bindkey -M vicmd 'y' vi-yank-help
 
 # Execute tmux when opening terminal
 # Ref: unix.stackexchange.com/questions/43601
@@ -55,18 +75,22 @@ setopt INC_APPEND_HISTORY
 setopt EXTENDED_HISTORY
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#444444"
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-setopt extendedglob # Use invert ^ for file selection
+setopt extendedglob                             # Use invert ^ for file selection
 
-# bindkey -v # Vi Mode Not necessary if EDITOR already set
-bindkey -v '^?' backward-delete-char    # Backspace in Vi mode
+# bindkey -v                                    # Vi Mode Not necessary if EDITOR already set
+bindkey -v '^?' backward-delete-char            # Backspace in Vi mode
 bindkey '^[ ' autosuggest-accept
 bindkey '^[l' history-substring-search-up
 bindkey '^[k' history-substring-search-up
 bindkey '^[j' history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+bindkey '^[[Z' reverse-menu-complete            # Enable shift-tab
 
 source "${ZDOTDIR}/.zshrc-mac"
+
+# Enable tab completion highlighting
+zstyle ':completion:*' menu select
 
 # The following lines were added by compinstall
 zstyle :compinstall filename "${ZDOTDIR}/.zshrc"

@@ -7,32 +7,41 @@
 --  ╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
 -------------------------------------------------------
 -- TODO
--- Try nvim lsp
--- Nvim Telescope search for only files with exact name
+-- Add LSP server configs for other most used languages
+-- Configure directory where lsp data should be stored
+-- Maybe revisit autocompletition (nvim-cmp)?
+-- Look into ccls compile/config options?
+--
+-- Nvim Telescope search for files with exact name/extension
 -- Nvim Telescope remember search history and maintain order
--- Nvim Telescope scroll through the previewer?
+--
 -- Code folding inside a particular scope (workaround)
 -- Jump back in history using alt+[ and fwd alt+]
+--  -- Learn about ctrl+O, ctrl+I
 -- Keep search query for diff buffer separate
--- Try a better terminal management approach
--- Better comment manager (like jsx,tsx, and lua,vim)
--- Describe a way to search visually selected word
--- NvimTree try to refresh tree when opening/closing a buffer
+-- Send commands from nvim to tmux?
 -- NvimTree map :bd to NvimTreeClose->:bd->NvimTreeToggle
--- NvimTree update tree when opening from session
--- Check this out: stackoverflow.com/questions/37552913
--- Watchout for extensions with popup (nui.nvim)
--- Some examples, Search Replace, Hunk Restore
--- Modify hunk movement because of leader h conflict
--- Better splits movement (sometimes I see opposite behav)
+-- Better splits resize (sometimes I see opposite behav)
 -- Modify lualine color theme to be based on background
+-- Use custom background color for lualine lsp
+-- Look into mfussenegger/nvim-dap
+-- Create custom theme exactly like vscode vibrant monokai
+-- autocmd float breaks undo history neovim 11439 (.conf/nvim-undo-/)
+-- LOok 'sindrets/diffview.nvim', 'kevinhwang91/nvim-bqf'
+-- Learn about partial lines in vim
+-- CAPSLOCK indication on status bar
+-- Look into neovim org mode
+-- Why does :w changes the cursor position? Maybe that autocmd?
+-- Occassionally treesitter breaks. Why? Have to reinstall
+-- A better way to remove sessions
+-- Look why saving session with nvim-tree leads to bad bufferline
 
 -- Shorthands used in this repo
 map = vim.api.nvim_set_keymap
 cmd = vim.cmd
 set = vim.opt
 exe = vim.api.nvim_command
-opt = { noremap = true, silent = true }
+nosil = { noremap = true, silent = true }
 
 -- Key Mappings [key] ---------------------------------
 require('keymaps')

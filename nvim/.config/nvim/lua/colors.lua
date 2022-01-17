@@ -1,40 +1,27 @@
--- Moluakai
--- cmd[[colorscheme moluakai]]
--- cmd[[colorscheme molokai]]
+-- cmd[[colorscheme catppuccin]]
 
--- OneDark
-require('onedark').setup()
+cmd[[colorscheme dracula]]
+vim.cmd("hi NvimTreeNormal guibg='#21222C'")
 
--- TokyoNight
--- vim.g.tokyonight_style = "day"
--- vim.g.tokyonight_style = "night"
--- vim.g.tokyonight_style = "dark"
--- vim.g.tokyonight_transparent = true
--- cmd[[colorscheme tokyonight]]
+-- require('github-theme').setup({theme_style = "dark",})
 
--- Github
--- require('github-theme').setup({
---   theme_style = "dark",
---   -- comment_style = "italic",
---   -- keyword_style = "italic",
---   -- function_style = "italic",
---   -- variable_style = "italic"
---   -- other config
--- })
-
--- Gruvbox
 -- vim.o.background = "dark"
 -- cmd[[colorscheme gruvbox]]
 
--- Nord
+-- cmd[[colorscheme molokai]]
+-- cmd[[colorscheme moluakai]]
+
 -- cmd[[colorscheme nord]]
 
--- Sonokai
+-- require('onedark').setup()
+
+-- vim.o.background = "light" -- to load onelight
+-- require('onedarkpro').load()
+
 -- vim.g.sonokai_style = "andromeda"
 -- cmd[[colorscheme sonokai]]
 
--- Others
--- cmd[[colorscheme catppuccin]]
--- cmd [[colorscheme moonfly]]
--- cmd[[colorscheme monokai]]
--- cmd[[colorscheme badwolf]]
+-- vim.g.tokyonight_style = "day"
+-- vim.g.tokyonight_style = "night"
+-- vim.g.tokyonight_style = "dark"
+-- cmd[[colorscheme tokyonight]]

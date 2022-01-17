@@ -1,5 +1,10 @@
 require'nvim-treesitter.configs'.setup
 {
+    context_commentstring =
+    {
+        enable = true,
+        enable_autocmd = false,
+    },
     highlight =
     {
         enable = true,
@@ -14,19 +19,24 @@ require'nvim-treesitter.configs'.setup
     {
         "bash",
         "c",
-        "cpp",
         "cmake",
+        "comment",
+        "cpp",
+        "css",
         "fish",
-        "html",
         "graphql",
+        "html",
         "java",
         "javascript",
+        "jsdoc",
         "json",
         "kotlin",
         "latex",
         "lua",
+        "markdown",
         "python",
         "regex",
+        "rust",
         "tsx",
         "typescript",
         "vim",

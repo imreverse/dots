@@ -68,20 +68,20 @@ vim.g.bufferline =
 }
 
 -- Goto buffer in position...
-map('n', '<A-1>', ':BufferGoto 1<CR>', opt)
-map('n', '<A-2>', ':BufferGoto 2<CR>', opt)
-map('n', '<A-3>', ':BufferGoto 3<CR>', opt)
-map('n', '<A-4>', ':BufferGoto 4<CR>', opt)
-map('n', '<A-5>', ':BufferGoto 5<CR>', opt)
-map('n', '<A-6>', ':BufferGoto 6<CR>', opt)
-map('n', '<A-7>', ':BufferGoto 7<CR>', opt)
-map('n', '<A-8>', ':BufferGoto 8<CR>', opt)
-map('n', '<A-9>', ':BufferLast<CR>',   opt)
+map('n', '<A-1>', ':BufferGoto 1<CR>', nosil)
+map('n', '<A-2>', ':BufferGoto 2<CR>', nosil)
+map('n', '<A-3>', ':BufferGoto 3<CR>', nosil)
+map('n', '<A-4>', ':BufferGoto 4<CR>', nosil)
+map('n', '<A-5>', ':BufferGoto 5<CR>', nosil)
+map('n', '<A-6>', ':BufferGoto 6<CR>', nosil)
+map('n', '<A-7>', ':BufferGoto 7<CR>', nosil)
+map('n', '<A-8>', ':BufferGoto 8<CR>', nosil)
+map('n', '<A-9>', ':BufferLast<CR>',   nosil)
 -- Quickly move to a buffer with hotkey
-map('n', '<Leader>b', ':BufferPick<CR>', opt)
+map('n', '<Leader>b', ':BufferPick<CR>', nosil)
 -- Move b/w buffers
-map('n', '<S-TAB>', ':BufferPrevious<CR>', opt)
-map('n', '<TAB>', ':BufferNext<CR>', opt)
+map('n', '<S-TAB>', ':BufferPrevious<CR>', nosil)
+map('n', '<TAB>', ':BufferNext<CR>', nosil)
 -- Shift buffers
-map('n', '<A-S-h>', ':BufferMovePrevious<CR>', opt)
-map('n', '<A-S-l>', ':BufferMoveNext<CR>', opt)
+map('n', '<A-S-h>', ':BufferMovePrevious<CR>', nosil)
+map('n', '<A-S-l>', ':BufferMoveNext<CR>', nosil)

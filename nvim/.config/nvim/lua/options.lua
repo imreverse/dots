@@ -1,7 +1,7 @@
 set.clipboard:append { "unnamedplus" }            -- Set clipboard global linux
 set.guicursor     = ''                            -- Set cursor block default
-set.cursorline    = true
--- set.mouse         = 'n'
+-- set.cursorline    = true
+set.mouse         = 'n'
 set.undofile      = true                          -- Undofile exists
 set.tabstop       = 4
 set.softtabstop   = 4
@@ -25,6 +25,7 @@ set.foldminlines  = 1
 -- set.foldlevelstart= 99
 set.ignorecase    = true
 set.smartcase     = true
+set.signcolumn    = 'yes'
 set.inccommand    = 'nosplit'                     -- Live substitution
 -- set.t_ZH          = '^[[3m'
 -- set.t_ZR          = '^[[23m'

@@ -80,20 +80,20 @@ require "bufferline".setup
 }
 
 -- Goto buffer in position...
-map('n', '<A-1>', ':BufferLineGoToBuffer 1<CR>', opt)
-map('n', '<A-2>', ':BufferLineGoToBuffer 2<CR>', opt)
-map('n', '<A-3>', ':BufferLineGoToBuffer 3<CR>', opt)
-map('n', '<A-4>', ':BufferLineGoToBuffer 4<CR>', opt)
-map('n', '<A-5>', ':BufferLineGoToBuffer 5<CR>', opt)
-map('n', '<A-6>', ':BufferLineGoToBuffer 6<CR>', opt)
-map('n', '<A-7>', ':BufferLineGoToBuffer 7<CR>', opt)
-map('n', '<A-8>', ':BufferLineGoToBuffer 8<CR>', opt)
--- map('n', '<A-9>', ':BufferLast<CR>',   opt)
+map('n', '<A-1>', ':BufferLineGoToBuffer 1<CR>', nosil)
+map('n', '<A-2>', ':BufferLineGoToBuffer 2<CR>', nosil)
+map('n', '<A-3>', ':BufferLineGoToBuffer 3<CR>', nosil)
+map('n', '<A-4>', ':BufferLineGoToBuffer 4<CR>', nosil)
+map('n', '<A-5>', ':BufferLineGoToBuffer 5<CR>', nosil)
+map('n', '<A-6>', ':BufferLineGoToBuffer 6<CR>', nosil)
+map('n', '<A-7>', ':BufferLineGoToBuffer 7<CR>', nosil)
+map('n', '<A-8>', ':BufferLineGoToBuffer 8<CR>', nosil)
+-- map('n', '<A-9>', ':BufferLast<CR>',   nosil)
 -- Quickly move to a buffer with hotkey
-map('n', '<Leader>b', ':BufferLinePick<CR>', opt)
+map('n', '<Leader>b', ':BufferLinePick<CR>', nosil)
 -- Move b/w buffers
-map('n', '<S-TAB>', ':BufferLineCyclePrev<CR>', opt)
-map('n', '<TAB>', ':BufferLineCycleNext<CR>', opt)
+map('n', '<S-TAB>', ':BufferLineCyclePrev<CR>', nosil)
+map('n', '<TAB>', ':BufferLineCycleNext<CR>', nosil)
 -- Shift buffers
-map('n', '<A-S-h>', ':BufferLineMovePrev<CR>', opt)
-map('n', '<A-S-l>', ':BufferLineMoveNext<CR>', opt)
+map('n', '<A-S-h>', ':BufferLineMovePrev<CR>', nosil)
+map('n', '<A-S-l>', ':BufferLineMoveNext<CR>', nosil)

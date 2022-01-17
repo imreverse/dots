@@ -2,7 +2,7 @@
 AntiAliasFonts=true
 BoldIntense=true
 ColorScheme=F7A5H
-Font=JetBrainsMono Nerd Font Mono,11,-1,5,50,0,0,0,0,0
+Font=JetBrainsMono Nerd Font,13,-1,5,57,0,0,0,0,0,Medium
 UseFontLineChararacters=false
 
 [General]

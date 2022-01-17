@@ -18,7 +18,10 @@ map('v', '<S-j>', '<NOP>', { noremap = true })
 -- TODO: Add a reason as to why I had to enter two <CR> here
 -- Because a single CR also works fine. If I find a usecase for
 -- two CRs, try to use the col number and line number to get cursor back
-map('n', '<ESC>', ':noh<CR>', { noremap = true, silent = true })
+map('n', '<ESC>', ':noh<CR>', nosil)
+
+-- Search for visually highlighted word
+map('v', '*', ":<c-u>let temp_variable=@\"<CR>gvy:<c-u>let @/='\\V<C-R>=escape(@\",'/\\')<CR>'<CR>:let @\"=temp_variable<CR>:<c-u>set hlsearch<CR>", nosil)
 
 -- Don't save change,delete to clipboard
 map('v', 'd', '\"_d', { noremap = true })
@@ -31,7 +34,7 @@ map('n', 'c', '\"_c', { noremap = true })
 map('n', '<C-a>', 'ggVG', { noremap = true })
 map('i', '<C-a>', '<ESC>ggVG', { noremap = true })
 
--- Move b/w splits
+-- Move b/w splits -- Better use CTRL-W instead (meeh)
 map('n', '<Leader>h', '<C-w>h', { noremap = true })
 map('n', '<Leader>j', '<C-w>j', { noremap = true })
 map('n', '<Leader>k', '<C-w>k', { noremap = true })

@@ -28,8 +28,7 @@ require('telescope').setup
         },
         vertical =
         {
-            mirror = true,
-            prompt_position = 'top'
+            mirror = true
         },
     },
     file_sorter =  require'telescope.sorters'.get_fuzzy_file,
@@ -58,6 +57,12 @@ require('telescope').setup
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
   }
 }
+require('telescope').load_extension('luasnip')
 
-map('n', '<Leader>ff', ':lua require"telescope.builtin".find_files({ hidden = true, layout_strategy = \'vertical\',  })<CR>', opt)
-map('n', '<Leader>fg', ':lua require"telescope.builtin".live_grep({ hidden = true })<CR>', opt)
+map('n', '<Leader>ff', ':lua require"telescope.builtin".find_files({ hidden = true, layout_strategy = \'vertical\',  })<CR>', nosil)
+map('n', '<Leader>fg', ':lua require"telescope.builtin".live_grep({ hidden = true })<CR>', nosil)
+map('n', '<Leader>fo', ':lua require"telescope.builtin".oldfiles({ hidden = true })<CR>', nosil)
+map('n', 'q/', ':lua require"telescope.builtin".search_history({ hidden = true })<CR>', nosil)
+map('n', 'q:', ':lua require"telescope.builtin".command_history({ hidden = true })<CR>', nosil)
+map('n', '<Leader>fd', ':lua require"telescope.builtin".diagnostics({ hidden = true, layout_strategy = \'vertical\',  })<CR>', nosil)
+map('n', '<Leader>fs', ':Telescope luasnip<CR>', nosil)

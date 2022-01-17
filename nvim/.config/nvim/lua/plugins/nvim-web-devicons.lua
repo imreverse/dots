@@ -12,7 +12,7 @@
 --     yellow    = '#eaed2f',
 --     white     = '#ffffff',
 -- }
--- require'nvim-web-devicons'.set_default_icon('', colors.lblue)
+require'nvim-web-devicons'.set_default_icon('', '#94ceeb')
 -- require'nvim-web-devicons'.setup
 -- {
 --     override =
