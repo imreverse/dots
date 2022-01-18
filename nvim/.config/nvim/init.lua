@@ -35,6 +35,9 @@
 -- Occassionally treesitter breaks. Why? Have to reinstall
 -- A better way to remove sessions
 -- Look why saving session with nvim-tree leads to bad bufferline
+-- Add custom highlighting for undotree, packer, etc
+-- Increase leader delay time (maybe inf?) and a better visual for it?
+-- Look why,what error nvim gives when :wq
 
 -- Shorthands used in this repo
 map = vim.api.nvim_set_keymap
