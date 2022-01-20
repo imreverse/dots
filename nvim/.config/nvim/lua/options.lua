@@ -3,9 +3,9 @@ set.clipboard:append { "unnamedplus" }            -- Set clipboard global linux
 -- set.cursorline    = true
 set.mouse         = 'n'
 set.undofile      = true                          -- Undofile exists
-set.tabstop       = 4
-set.softtabstop   = 4
-set.shiftwidth    = 4
+set.tabstop       = 2
+set.softtabstop   = 2
+set.shiftwidth    = 2
 set.expandtab     = true
 set.autoindent    = true
 set.number        = true                          -- Show numberline
