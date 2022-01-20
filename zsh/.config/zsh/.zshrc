@@ -13,13 +13,8 @@
 # TODO
 # !! WHY I'M UNABLE TO LOAD PLUGINS??
 # Not working kutsan/zsh-system-clipboard, instead create own paste method
-# Look into https://github.com/jeffreytse/zsh-vi-mode
 # https://thevaluable.dev/zsh-install-configure-mouseless/
 # Find a way to do invert file selection in CLI
-# Alt+L/K should only accept command from history which starts with current
-#   substring, not any substring matching current string
-#   Ex: pnpm install is a substring in another command git clean -fdX && pnpm install
-#   So, using pnpm in... and doing alt+K/L should not use git command
 # Use .zshenv inside ZDOTDIR
 
 
@@ -80,7 +75,7 @@ setopt extendedglob                             # Use invert ^ for file selectio
 # bindkey -v                                    # Vi Mode Not necessary if EDITOR already set
 bindkey -v '^?' backward-delete-char            # Backspace in Vi mode
 bindkey '^[ ' autosuggest-accept
-bindkey '^[l' history-substring-search-up
+bindkey '^[l' autosuggest-accept
 bindkey '^[k' history-substring-search-up
 bindkey '^[j' history-substring-search-down
 bindkey '^[[A' history-substring-search-up
