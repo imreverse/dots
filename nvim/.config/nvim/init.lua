@@ -14,6 +14,7 @@
 --
 -- Nvim Telescope search for files with exact name/extension
 -- Nvim Telescope remember search history and maintain order
+-- Nvim Telescope sometimes break when editing command/file search
 --
 -- Code folding inside a particular scope (workaround)
 -- Jump back in history using alt+[ and fwd alt+]
@@ -38,6 +39,10 @@
 -- Add custom highlighting for undotree, packer, etc
 -- Increase leader delay time (maybe inf?) and a better visual for it?
 -- Look why,what error nvim gives when :wq
+-- Use a search bar plugin? I want the count to appear at top right
+-- Set autoreload for buffers?
+-- Bind caps instead of ctrl, for mac, linux, windows
+-- Scroll with  ouse should be single line, not 3 lines for smoother experience
 
 -- Shorthands used in this repo
 map = vim.api.nvim_set_keymap

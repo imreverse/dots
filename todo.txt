@@ -35,3 +35,5 @@ TODO list of things related to Linux apart from configs:
 15. What are cookies? How is data privacy related? And EUDC?
 
 16. Get package recommendation when wrong command has been entered pacman
+
+17. Reinstall endeavour with btrfs and maybe also try Fedora?

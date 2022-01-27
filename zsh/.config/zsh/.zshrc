@@ -16,6 +16,7 @@
 # https://thevaluable.dev/zsh-install-configure-mouseless/
 # Find a way to do invert file selection in CLI
 # Use .zshenv inside ZDOTDIR
+# Investigate why cursor turns to block mode when in insert mode after a few secs
 
 
 # Source Antigen

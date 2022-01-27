@@ -60,6 +60,7 @@ require('telescope').setup
 require('telescope').load_extension('luasnip')
 
 map('n', '<Leader>ff', ':lua require"telescope.builtin".find_files({ hidden = true, layout_strategy = \'vertical\',  })<CR>', nosil)
+map('n', '<Leader>fb', ':lua require"telescope.builtin".buffers({ hidden = true, layout_strategy = \'vertical\',  })<CR>', nosil)
 map('n', '<Leader>fg', ':lua require"telescope.builtin".live_grep({ hidden = true })<CR>', nosil)
 map('n', '<Leader>fo', ':lua require"telescope.builtin".oldfiles({ hidden = true })<CR>', nosil)
 map('n', 'q/', ':lua require"telescope.builtin".search_history({ hidden = true })<CR>', nosil)

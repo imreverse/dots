@@ -8,6 +8,10 @@ vim.g.mapleader = " "
 -- Function{} code fold
 map('n', 'zc', 'zfa{', { noremap = true })
 
+-- Single line scroll (does not meet expectation)
+-- map('n', '<ScrollWheelUp>', '<C-Y>', nosil)
+-- map('n', '<ScrollWheelDown>', '<C-E>', nosil)
+
 -- Undo till last save (Better use undoTree instead)
 -- map('n', 'U', ':earlier 1f<CR>', { noremap = true, silent = true })
 
