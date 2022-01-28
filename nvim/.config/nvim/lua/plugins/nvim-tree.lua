@@ -28,8 +28,6 @@ vim.g.nvim_tree_indent_markers = 1
 --     }
 -- })
 
-cmd("highlight NvimTreeExecFile guifg='#f8f8f2'")
-
 vim.g.nvim_tree_icons = {
     default = "",
 }
@@ -41,7 +39,7 @@ map('n', '<Leader>ec', ":lua require'nvim-tree.lib'.collapse_all()<CR>:NvimTreeR
 local prev = "require'nvim-tree'.on_keypress('preview')"
 local refr = "require'nvim-tree'.on_keypress('refresh')"
 local edit = "require'nvim-tree'.on_keypress('edit')"
-local refreshThenEdit = ":lua "..prev.." "..refr.." "..edit.."<CR>"
+local refreshThenEdit = ":lua "..prev.." "..refr.." "..edit.." "..edit.."<CR>"
 local prevAndThenRefr = ":lua "..prev.." "..refr.."<CR>"
 
 -- following options are the default

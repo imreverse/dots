@@ -60,5 +60,5 @@ require('options')
 -- Plug Plugin Manager [plg] --------------------------
 require('plugins')
 
--- Color Schemes [clr] --------------------------------
-require('colors')
+-- Theme [thm] ----------------------------------------
+require('theme')

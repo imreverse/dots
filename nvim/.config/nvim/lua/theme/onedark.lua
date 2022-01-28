@@ -1,4 +1,5 @@
-local colors = {
+local colors =
+{
     white = "#abb2bf",
     darker_black = "#1b1f27",
     black = "#1e222a", --  nvim bg
@@ -27,7 +28,10 @@ local colors = {
     cyan = "#a3b8ef",
     statusline_bg = "#22262e",
     lightbg = "#2d3139",
-    lightbg2 = "#262a32"
+    lightbg2 = "#262a32",
+    pmenu_bg = "#A3BE8C",
+    folder_bg = "#61afef",
 }
 
 return colors
+

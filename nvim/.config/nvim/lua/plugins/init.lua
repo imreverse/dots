@@ -7,7 +7,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- Plugins
-return require('packer').startup(function()
+return require('packer').startup({function()
     use 'wbthomason/packer.nvim'                        -- Plugin manager
     -- use
     -- {
@@ -26,7 +26,7 @@ return require('packer').startup(function()
     -- use 'ellisonleao/gruvbox.nvim'
     -- use 'shaunsingh/nord.nvim'
     -- use 'ful1e5/onedark.nvim'
-    use 'olimorris/onedarkpro.nvim'
+    -- use 'olimorris/onedarkpro.nvim'
     -- use 'sainnhe/sonokai'
     -- use 'folke/tokyonight.nvim'
 
@@ -148,4 +148,16 @@ return require('packer').startup(function()
         'petertriho/nvim-scrollbar',
         config = function() require('plugins.nvim-scrollbar') end
     }
-end)
+    use
+    {
+        'j-hui/fidget.nvim',
+        config = function() require"fidget".setup{} end
+    }
+end,
+config = {
+    display = {
+        open_fn = function()
+            return require('packer.util').float({ border = 'single' })
+        end
+    }
+}})
