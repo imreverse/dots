@@ -27,6 +27,14 @@ map('n', '<ESC>', ':noh<CR>', nosil)
 -- Search for visually highlighted word
 map('v', '*', ":<c-u>let temp_variable=@\"<CR>gvy:<c-u>let @/='\\V<C-R>=escape(@\",'/\\')<CR>'<CR>:let @\"=temp_variable<CR>:<c-u>set hlsearch<CR>", nosil)
 
+-- Keep indent highlighted
+map('v', '<', '<gv', nosil)
+map('v', '>', '>gv', nosil)
+
+-- Move a selected region up or down
+map('v', 'J', ":m '>+1<CR>gv=gv", nosil)
+map('v', 'K', ":m '<-2<CR>gv=gv", nosil)
+
 -- Don't save change,delete to clipboard
 map('v', 'd', '\"_d', { noremap = true })
 map('n', 'd', '\"_d', { noremap = true })

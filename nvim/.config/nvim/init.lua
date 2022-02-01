@@ -10,9 +10,7 @@
 -- Add LSP server configs for other most used languages
 -- Configure directory where lsp data should be stored
 -- Maybe revisit autocompletition (nvim-cmp)?
--- Look into ccls compile/config options?
 --
--- Nvim Telescope search for files with exact name/extension
 -- Nvim Telescope remember search history and maintain order
 -- Nvim Telescope sometimes break when editing command/file search
 --
@@ -43,6 +41,8 @@
 -- Set autoreload for buffers?
 -- Bind caps instead of ctrl, for mac, linux, windows
 -- Scroll with  ouse should be single line, not 3 lines for smoother experience
+-- Try danymat/neogen for doc annotations
+-- Look out if file masking is provided by default in telescope w/o extension
 
 -- Shorthands used in this repo
 map = vim.api.nvim_set_keymap

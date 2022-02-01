@@ -88,7 +88,10 @@ return require('packer').startup({function()
     use
     {
         'nvim-telescope/telescope.nvim',                -- Fuzzy searcher
-        requires = {{'nvim-lua/plenary.nvim'}},
+        requires = {
+            {'nvim-lua/plenary.nvim'},
+            {'nvim-telescope/telescope-rg.nvim'}
+        },
         config = function() require('plugins.telescope') end
     }
     use 'airblade/vim-current-search-match'             -- Highlight current search term
