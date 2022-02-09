@@ -8,6 +8,8 @@
 -------------------------------------------------------
 -- TODO
 -- Add LSP server configs for other most used languages
+-- { vimls, tsserver, sumneko_lua, jsonls, jdtls, html, graphql,
+--   eslint, cssmodules_ls/cssls, ccls, bashls }
 -- Configure directory where lsp data should be stored
 -- Maybe revisit autocompletition (nvim-cmp)?
 --

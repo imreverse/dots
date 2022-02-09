@@ -66,13 +66,38 @@ local nvim_lsp = require('lspconfig')
 -- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'ccls', 'tsserver' }
-for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup {
-        on_attach = on_attach,
-        -- capabilities = capabilities,
-        flags = {
-            debounce_text_changes = 150,
-        }
+nvim_lsp.ccls.setup {
+    -- capabilities = capabilities,
+    filetypes = { "cpp", "c", "hpp", "h" },
+    on_attach = on_attach,
+    flags = {
+        debounce_text_changes = 150,
     }
-end
+}
+
+nvim_lsp.tsserver.setup {
+    cmd = { "typescript-language-server", "--stdio" },
+    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+    on_attach = on_attach,
+    init_options = {
+      hostInfo = "neovim"
+    }
+}
+
+nvim_lsp.graphql.setup {
+    cmd = { "graphql-lsp", "server", "-m", "stream" },
+    filetypes = { "graphql", "typescriptreact", "javascriptreact" },
+    on_attach = on_attach,
+    init_options = {
+      hostInfo = "neovim"
+    }
+}
+
+nvim_lsp.eslint.setup {
+    cmd = { "vscode-eslint-language-server", "--stdio" },
+    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue" },
+    on_attach = on_attach,
+    init_options = {
+      hostInfo = "neovim"
+    }
+}
