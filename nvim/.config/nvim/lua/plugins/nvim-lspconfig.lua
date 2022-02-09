@@ -101,3 +101,21 @@ nvim_lsp.eslint.setup {
       hostInfo = "neovim"
     }
 }
+
+nvim_lsp.cssmodules_ls.setup {
+    cmd = { "cssmodules-language-server" },
+    filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+    on_attach = on_attach,
+    init_options = {
+      hostInfo = "neovim"
+    }
+}
+
+nvim_lsp.bashls.setup {
+    cmd = { "bash-language-server", "start" },
+    cmd_env = {
+      GLOB_PATTERN = "*@(.sh|.inc|.bash|.command)"
+    },
+    filetypes = { "sh" },
+    single_file_support = true
+}
