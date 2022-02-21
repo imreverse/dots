@@ -11,13 +11,10 @@
 # ░                                  ░
 #
 # TODO
-# !! WHY I'M UNABLE TO LOAD PLUGINS??
 # Not working kutsan/zsh-system-clipboard, instead create own paste method
 # https://thevaluable.dev/zsh-install-configure-mouseless/
-# Find a way to do invert file selection in CLI
-# Use .zshenv inside ZDOTDIR
-# Investigate why cursor turns to block mode when in insert mode after a few secs
-
+# Look why I'm unable to save more than 1000 line history in macos
+# Add alias for updating mirrors
 
 # Source Antigen
 if ! [ -e ${ZDOTDIR}/plugins/antigen.zsh ]
@@ -33,6 +30,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle jeffreytse/zsh-vi-mode
+antigen bundle Tarrasch/zsh-bd
 # antigen bundle kutsan/zsh-system-clipboard
 antigen theme romkatv/powerlevel10k
 antigen apply
@@ -50,7 +48,7 @@ function vi-yank-help {
 zle -N vi-yank-help
 bindkey -M vicmd 'y' vi-yank-help
 
-# Execute tmux when opening terminal
+# Execute tmux when opening terminal (might be better if I use  this only for kitty?)
 # Ref: unix.stackexchange.com/questions/43601
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
     exec tmux new-session -A -s meow
@@ -71,7 +69,8 @@ setopt INC_APPEND_HISTORY
 setopt EXTENDED_HISTORY
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#444444"
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-setopt extendedglob                             # Use invert ^ for file selection
+# ZSH_SYSTEM_CLIPBOARD_USE_WL_CLIPBOARD=true
+setopt extendedglob                             # Use invert ^ for file selection ( rm -- ^a* )
 
 # bindkey -v                                    # Vi Mode Not necessary if EDITOR already set
 bindkey -v '^?' backward-delete-char            # Backspace in Vi mode
