@@ -88,14 +88,14 @@ end
 
 
 -- Default
-local leftComSep = '│'
-local rightComSep ='│'
+-- local leftComSep = '│'
+-- local rightComSep ='│'
 
 -- Bubbles
--- local leftSecSep = ''
--- local leftComSep = ''
--- local rightSecSep = ''
--- local rightComSep =''
+local leftSecSep = ''
+local leftComSep = ''
+local rightSecSep = ''
+local rightComSep =''
 
 -- Inclined
 -- local leftSecSep = ''
@@ -260,7 +260,7 @@ require'lualine'.setup
                 symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '},
                 colored = true,           -- Displays diagnostics status in color if set to true.
                 update_in_insert = false, -- Update diagnostics in insert mode.
-                always_visible = true,   -- Show diagnostics even if there are none.
+                always_visible = false,   -- Show diagnostics even if there are none.
             },
             {readOnly}
         },

@@ -51,7 +51,7 @@ bindkey -M vicmd 'y' vi-yank-help
 # Execute tmux when opening terminal (might be better if I use  this only for kitty?)
 # Ref: unix.stackexchange.com/questions/43601
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-    exec tmux new-session -A -s meow
+    exec tmux new-session -A -s MEOW
 fi
 
 # Aliases

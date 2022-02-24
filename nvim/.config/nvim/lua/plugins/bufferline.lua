@@ -1,13 +1,13 @@
 require "bufferline".setup
 {
-    -- highlights =
-    -- {
-    --     buffer_selected =
-    --     {
-    --         guifg = normal_fg,
-    --         guibg = normal_bg,
-    --         gui = ""
-    --     },
+    highlights =
+    {
+        buffer_selected =
+        {
+            guifg = normal_fg,
+            guibg = normal_bg,
+            gui = "italic"
+        }
     --     indicator_selected = {
     --         guifg =
     --         {
@@ -20,7 +20,7 @@ require "bufferline".setup
     --             highlight = "Normal"
     --         }
     --     }
-    -- },
+    },
     options =
     {
         offsets =
