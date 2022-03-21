@@ -1,6 +1,6 @@
 vim.g.nvim_tree_highlight_opened_files  = 3
-vim.g.nvim_tree_group_empty = 1
-vim.g.nvim_tree_indent_markers = 1
+-- vim.g.nvim_tree_group_empty = 1
+-- vim.g.nvim_tree_indent_markers = 1
 -- vim.api.nvim_set_var('nvim_tree_icons',
 -- {
 --     default = '',
@@ -34,7 +34,7 @@ vim.g.nvim_tree_icons = {
 
 map('n', '<A-e>', ":NvimTreeToggle<CR>:NvimTreeRefresh<CR>", nosil)
 map('n', '<Leader>el', ":NvimTreeFindFile<CR>:NvimTreeRefresh<CR>", nosil)
-map('n', '<Leader>ec', ":lua require'nvim-tree.lib'.collapse_all()<CR>:NvimTreeRefresh<CR>", nosil)
+map('n', '<Leader>ec', ":NvimTreeCollapse<CR>", nosil)
 
 local prev = "require'nvim-tree'.on_keypress('preview')"
 local refr = "require'nvim-tree'.on_keypress('refresh')"

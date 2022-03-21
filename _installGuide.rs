@@ -1,6 +1,9 @@
 OS: EndeavourOS
 Desktop Environment: KDE
 
+Test webcam using mpv (PS change videoX to any number)
+mpv av://v4l2:/dev/video2 --profile=low-latency --untimed
+
 0. INDEX
 1. Pacman Config, Change Mirrorlist, Do a Full Upgrade
 2. Mount and Symlink

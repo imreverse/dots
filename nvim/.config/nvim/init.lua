@@ -18,7 +18,6 @@
 -- Code folding inside a particular scope (workaround)
 -- Jump back in history using alt+[ and fwd alt+]
 --  -- Learn about ctrl+O, ctrl+I
--- Keep search query for diff buffer separate
 -- Send commands from nvim to tmux?
 -- NvimTree map :bd to NvimTreeClose->:bd->NvimTreeToggle
 -- Better splits resize (sometimes I see opposite behav)
