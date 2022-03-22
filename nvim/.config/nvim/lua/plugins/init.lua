@@ -156,6 +156,11 @@ return require('packer').startup({function()
         'j-hui/fidget.nvim',
         config = function() require"fidget".setup{} end
     }
+    use
+    {
+        'weilbith/nvim-code-action-menu',
+        cmd = 'CodeActionMenu'
+    }
 end,
 config = {
     display = {
