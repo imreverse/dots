@@ -1,8 +1,8 @@
 -- Custom colors and theme
 local colors =
 {
-    black   = '#343a44',
-    lblack  = '#464e5b',
+    black   = '#303341',
+    lblack  = '#44475a',
 
     blue    = '#85d3f2',
     lblue   = '#c1e2f2',
@@ -92,16 +92,16 @@ end
 -- local rightComSep ='│'
 
 -- Bubbles
-local leftSecSep = ''
-local leftComSep = ''
-local rightSecSep = ''
-local rightComSep =''
+-- local leftSecSep = ''
+-- local leftComSep = ''
+-- local rightSecSep = ''
+-- local rightComSep =''
 
 -- Inclined
--- local leftSecSep = ''
--- local leftComSep = '/'
--- local rightSecSep = ''
--- local rightComSep ='/'
+local leftSecSep = ''
+local leftComSep = '/'
+local rightSecSep = ''
+local rightComSep ='/'
 
 -- Arrows
 -- local leftSecSep = ''

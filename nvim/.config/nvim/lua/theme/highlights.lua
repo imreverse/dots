@@ -31,6 +31,7 @@ function highlight(colors)
     local orange = colors.orange
     local one_bg3 = colors.one_bg3
 
+    fg_bg("Normal",white, black)
     fg("cursorlinenr", white)
 
     -- Pmenu
