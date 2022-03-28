@@ -1,28 +1,28 @@
 -- Custom colors and theme
 local colors =
 {
-    black   = '#303341',
+    black   = '#2d2c42',
     lblack  = '#44475a',
 
-    blue    = '#85d3f2',
-    lblue   = '#c1e2f2',
-    dblue   = '#314e59',
+    blue    = '#7aa2f7',
+    lblue   = '#aec7fc',
+    dblue   = '#3b4261',
 
     green   = '#B0FF9D',
     lgreen  = '#ceffc7',
-    dgreen  = '#3a5434',
+    dgreen  = '#3e473c',
 
-    purple  = '#CB99C9',
-    lpurple = '#ffe0fc',
-    dpurple = '#423241',
+    purple  = '#ba7af5',
+    lpurple = '#d2a7fa',
+    dpurple = '#3f3454',
 
     red     = '#DB5856',
     lred    = '#ffb0b0',
-    dred    = '#411919',
+    dred    = '#3d2525',
 
     yellow  = '#e7c664',
     lyellow = '#ffeda7',
-    dyellow = '#6c5c2f'
+    dyellow = '#54543d'
 }
 
 local r3v =
@@ -30,43 +30,43 @@ local r3v =
     normal =
     {
         a = {fg = colors.black, bg = colors.blue, gui = 'bold'},
-        b = {fg = colors.lblue, bg = colors.lblack},
+        b = {fg = colors.lblue, bg = colors.dblue},
         c = {fg = colors.lblue, bg = colors.black}
     },
     insert =
     {
         a = {fg = colors.black, bg = colors.green, gui = 'bold'},
-        b = {fg = colors.lgreen, bg = colors.lblack},
+        b = {fg = colors.lgreen, bg = colors.dgreen},
         c = {fg = colors.lgreen, bg = colors.black}
     },
     visual =
     {
         a = {fg = colors.black, bg = colors.purple, gui = 'bold'},
-        b = {fg = colors.lpurple, bg = colors.lblack},
+        b = {fg = colors.lpurple, bg = colors.dpurple},
         c = {fg = colors.lpurple, bg = colors.black}
     },
     command =
     {
         a = {fg = colors.black, bg = colors.yellow, gui = 'bold'},
-        b = {fg = colors.lyellow, bg = colors.lblack},
+        b = {fg = colors.lyellow, bg = colors.dyellow},
         c = {fg = colors.lyellow, bg = colors.black}
     },
     terminal =
     {
         a = {fg = colors.black, bg = colors.green, gui = 'bold'},
-        b = {fg = colors.lgreen, bg = colors.lblack},
+        b = {fg = colors.lgreen, bg = colors.dgreen},
         c = {fg = colors.lgreen, bg = colors.black}
     },
     replace =
     {
         a = {fg = colors.black, bg = colors.red, gui = 'bold'},
-        b = {fg = colors.lred, bg = colors.lblack},
+        b = {fg = colors.lred, bg = colors.dred},
         c = {fg = colors.lred, bg = colors.black}
     },
     inactive =
     {
         a = {fg = colors.black, bg = colors.blue, gui = 'bold'},
-        b = {fg = colors.lblue, bg = colors.lblack},
+        b = {fg = colors.lblue, bg = colors.dblue},
         c = {fg = colors.lblue, bg = colors.black}
     }
 }
