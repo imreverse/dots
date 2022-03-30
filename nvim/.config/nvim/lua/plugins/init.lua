@@ -30,12 +30,12 @@ return require('packer').startup({function()
     -- use 'sainnhe/sonokai'
     -- use 'folke/tokyonight.nvim'
 
-    use
+    use                                                     -- Dashboard
     {
-        'mhinz/vim-startify',                           -- Dashboard
-        config = function() require('plugins.startify') end
+        'goolord/alpha-nvim',
+        -- requires = {{'BlakeJC94/alpha-nvim-fortune'}},
+        config = function() require('plugins.alpha-nvim') end
     }
-    -- use 'glepnir/dashboard-nvim'
     use
     {
         'nvim-lualine/lualine.nvim',                    -- Statusline
