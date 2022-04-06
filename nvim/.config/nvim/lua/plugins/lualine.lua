@@ -176,6 +176,26 @@ local symbolsOutline =
     filetypes = {'Outline'}
 }
 
+local function alphaText()
+    return 'NEOVIM'
+end
+local alpha =
+{
+    sections =
+    {
+        lualine_a =
+        {
+            {
+                alphaText,
+                separator = { left = rightSecSep, right = leftSecSep },
+                padding = 1
+            }
+        }
+    },
+    filetypes = {'alpha'}
+}
+
+
 local function packerText()
     return 'Packer'
 end
@@ -287,6 +307,6 @@ require'lualine'.setup
         lualine_z = {}
     },
     tabline = {},
-    extensions = { 'fugitive', 'nvim-tree', 'toggleterm', helpSection, gitBlame, symbolsOutline, packer }
+    extensions = { alpha, 'fugitive', 'nvim-tree', 'toggleterm', helpSection, gitBlame, symbolsOutline, packer }
     -- echo &ft to get filetype (case-sensitive)
 }
