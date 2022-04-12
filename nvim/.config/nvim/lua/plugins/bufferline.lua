@@ -75,7 +75,30 @@ require "bufferline".setup
         view = "multiwindow",
         show_buffer_close_icons = false,
         show_close_icon = false,
-        separator_style = "thin",
+        separator_style = "slant",
+        groups = {
+            options = {
+              toggle_hidden_on_enter = true -- when you re-enter a hidden group this options re-opens that group so the buffer is visible
+            },
+            items = {
+              {
+                name = "CPP", -- Mandatory
+                highlight = {guisp = "#7aa2f7"}, -- Optional
+                priority = 2, -- determines where it will appear relative to other groups (Optional)
+                icon = "", -- Optional
+                matcher = function(buf) -- Mandatory
+                  return buf.filename:match('%.cpp')
+                end
+              },
+              {
+                name = "Docs",
+                highlight = {gui = "undercurl", guisp = "#B0FF9D"},
+                matcher = function(buf)
+                  return buf.filename:match('%.md') or buf.filename:match('%.txt')
+                end
+              }
+            }
+        },
     }
 }
 
