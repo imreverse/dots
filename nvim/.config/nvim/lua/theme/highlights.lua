@@ -33,6 +33,7 @@ function highlight(colors)
 
     fg_bg("Normal",white, black)
     fg("cursorlinenr", white)
+    fg_bg("WinSeparator", grey, 'None')
 
     -- Pmenu
     bg("Pmenu", one_bg)

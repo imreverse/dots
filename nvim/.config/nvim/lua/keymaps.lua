@@ -6,7 +6,7 @@ cmd('cnoreabbrev PS PackerSync')
 vim.g.mapleader = " "
 
 -- Function{} code fold
-map('n', 'zc', 'zfa{', { noremap = true })
+-- map('n', 'zc', 'zfa{', { noremap = true })
 
 -- Single line scroll (does not meet expectation)
 -- map('n', '<ScrollWheelUp>', '<C-Y>', nosil)
@@ -16,8 +16,8 @@ map('n', 'zc', 'zfa{', { noremap = true })
 -- map('n', 'U', ':earlier 1f<CR>', { noremap = true, silent = true })
 
 -- Unmap shift+J
-map('n', '<S-j>', '<NOP>', { noremap = true })
-map('v', '<S-j>', '<NOP>', { noremap = true })
+-- map('n', '<S-j>', '<NOP>', { noremap = true })
+-- map('v', '<S-j>', '<NOP>', { noremap = true })
 
 -- TODO: Add a reason as to why I had to enter two <CR> here
 -- Because a single CR also works fine. If I find a usecase for
@@ -43,8 +43,7 @@ map('v', 'c', '\"_c', { noremap = true })
 map('n', 'c', '\"_c', { noremap = true })
 
 -- Select All
-map('n', '<C-a>', 'ggVG', { noremap = true })
-map('i', '<C-a>', '<ESC>ggVG', { noremap = true })
+-- map('n', '<C-a>', 'ggVGy<C-S-o>zz', { noremap = true })
 
 -- Move b/w splits -- Better use CTRL-W instead (meeh)
 map('n', '<Leader>h', '<C-w>h', { noremap = true })
@@ -61,8 +60,6 @@ map('n', '<A-k>', ':resize +1<CR>', { noremap = true, silent = true })
 -- Change working directory to current file's directory
 -- map('n', '<Leader>da', ':cd %:p:h<CR>', { noremap = true })
 -- map('n', '<Leader>cd', ':lcd %:p:h | NERDTreeCWD<CR>', { noremap = true })
--- Unnecessary
--- map('n', '<Leader>vv', ':e $HOME/.config/nvim/init.lua<CR>', { noremap = true })
 
 cmd('cnoreabbrev H vert h')
 -- cnoreabbrev H vert h

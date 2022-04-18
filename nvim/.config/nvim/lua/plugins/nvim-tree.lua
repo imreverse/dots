@@ -103,8 +103,8 @@ require'nvim-tree'.setup {
             custom_only = false,
             list =
             {
-                { key = {"<CR>", "o", "<2-LeftMouse>"}, cb = refreshThenEdit, mode = "n" },
-                { key = {"<TAB>"}, cb = prevAndThenRefr, mode = "n" }
+                -- { key = {"<CR>", "o", "<2-LeftMouse>"}, cb = refreshThenEdit, mode = "n" },
+                -- { key = {"<TAB>"}, cb = prevAndThenRefr, mode = "n" }
             }
         },
         number = false,

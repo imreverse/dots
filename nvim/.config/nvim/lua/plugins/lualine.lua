@@ -87,9 +87,13 @@ local function readOnly()
 end
 
 
+-- Empty
+-- local leftComSep = ''
+-- local rightComSep =''
+
 -- Default
--- local leftComSep = '│'
--- local rightComSep ='│'
+local leftComSep = '│'
+local rightComSep ='│'
 
 -- Bubbles
 -- local leftSecSep = ''
@@ -98,10 +102,10 @@ end
 -- local rightComSep =''
 
 -- Inclined
-local leftSecSep = ''
-local leftComSep = '/'
-local rightSecSep = ''
-local rightComSep ='/'
+-- local leftSecSep = ''
+-- local leftComSep = '/'
+-- local rightSecSep = ''
+-- local rightComSep ='/'
 
 -- Arrows
 -- local leftSecSep = ''
@@ -222,7 +226,8 @@ require'lualine'.setup
         theme = r3v,
         section_separators = { left = leftSecSep, right = rightSecSep },
         component_separators = { left = leftComSep, right = rightComSep },
-        disabled_filetypes = {}
+        disabled_filetypes = {},
+        globalstatus = true
     },
     sections =
     {
@@ -236,19 +241,6 @@ require'lualine'.setup
         },
         lualine_b =
         {
-            'branch',
-            {
-                'diff',
-                colored = true, -- displays diff status in color if set to true
-                -- -- all colors are in format #rrggbb
-                -- diff_color =
-                -- {
-                --     added = colors.black, -- changes diff's added foreground color
-                --     modified = colors.black, -- changes diff's modified foreground color
-                --     removed = colors.black -- changes diff's removed foreground color
-                -- },
-                symbols = {added = '+', modified = '~', removed = '-'} -- changes diff symbols
-            }
         },
         lualine_c =
         {
@@ -277,25 +269,14 @@ require'lualine'.setup
                     info  = 'DiagnosticInfo',  -- Changes diagnostics' info color.
                     hint  = 'DiagnosticHint',  -- Changes diagnostics' hint color.
                 },
-                symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '},
+                symbols = {error = '● ', warn = '● ', info = '● ', hint = '● '},
                 colored = true,           -- Displays diagnostics status in color if set to true.
                 update_in_insert = false, -- Update diagnostics in insert mode.
                 always_visible = false,   -- Show diagnostics even if there are none.
-            },
-            {readOnly}
+            }
         },
         lualine_y = {{getPos}},
-        lualine_z =
-        {
-            {
-                'filetype',
-                fmt = string.upper,
-                colored = false,
-                separator = { left = rightSecSep, right = leftSecSep },
-                icons_enabled = true,
-                padding = 1
-            }
-        }
+        lualine_z = {'branch'}
     },
     inactive_sections =
     {
@@ -307,6 +288,6 @@ require'lualine'.setup
         lualine_z = {}
     },
     tabline = {},
-    extensions = { alpha, 'fugitive', 'nvim-tree', 'toggleterm', helpSection, gitBlame, symbolsOutline, packer }
+    extensions = { alpha, 'toggleterm', gitBlame }
     -- echo &ft to get filetype (case-sensitive)
 }

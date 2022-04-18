@@ -9,11 +9,6 @@ end
 -- Plugins
 return require('packer').startup({function()
     use 'wbthomason/packer.nvim'                        -- Plugin manager
-    -- use
-    -- {
-    --     'projekt0n/circles.nvim',
-    --     config = function() require('plugins.circles') end
-    -- }
     use
     {
         'kyazdani42/nvim-web-devicons',
@@ -33,7 +28,6 @@ return require('packer').startup({function()
     use                                                     -- Dashboard
     {
         'goolord/alpha-nvim',
-        -- requires = {{'BlakeJC94/alpha-nvim-fortune'}},
         config = function() require('plugins.alpha-nvim') end
     }
     use
@@ -41,7 +35,7 @@ return require('packer').startup({function()
         'nvim-lualine/lualine.nvim',                    -- Statusline
         config = function() require('plugins.lualine') end
     }
-    use 'JoosepAlviste/nvim-ts-context-commentstring'
+    -- use 'JoosepAlviste/nvim-ts-context-commentstring'
     -- Bufferline no animations
     -- Barbar offset bad
     use
@@ -96,11 +90,11 @@ return require('packer').startup({function()
     }
     use 'airblade/vim-current-search-match'             -- Highlight current search term
     use 'google/vim-searchindex'                        -- Search with count 99+
-    use
-    {
-        "akinsho/nvim-toggleterm.lua",                  -- Terminal
-        config = function() require('plugins.toggleterm') end
-    }
+    -- use
+    -- {
+    --     "akinsho/nvim-toggleterm.lua",                  -- Terminal
+    --     config = function() require('plugins.toggleterm') end
+    -- }
     use
     {
         'mbbill/undotree',                              -- Undo history
@@ -122,11 +116,11 @@ return require('packer').startup({function()
         requires = {{'nvim-lua/plenary.nvim'}},
         config = function() require('plugins.gitsigns') end
     }
-    use
-    {
-        'simrat39/symbols-outline.nvim',                -- Function Outline
-        config = function() require('plugins.outline') end
-    }
+    -- use
+    -- {
+    --     'simrat39/symbols-outline.nvim',                -- Function Outline
+    --     config = function() require('plugins.outline') end
+    -- }
     use
     {
         "benfowler/telescope-luasnip.nvim"
@@ -136,11 +130,11 @@ return require('packer').startup({function()
         'norcalli/nvim-colorizer.lua',
         config = function() require'colorizer'.setup() end
     }
-    use
-    {
-        'folke/trouble.nvim',
-        config = function() require'trouble'.setup() end
-    }
+    -- use
+    -- {
+    --     'folke/trouble.nvim',
+    --     config = function() require'trouble'.setup() end
+    -- }
     use
     {
         'karb94/neoscroll.nvim',
@@ -161,11 +155,5 @@ return require('packer').startup({function()
         'weilbith/nvim-code-action-menu',
         cmd = 'CodeActionMenu'
     }
-end,
-config = {
-    display = {
-        open_fn = function()
-            return require('packer.util').float({ border = 'single' })
-        end
-    }
-}})
+end
+})
