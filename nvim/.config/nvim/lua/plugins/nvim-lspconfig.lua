@@ -1,7 +1,7 @@
 local signs = { Error = "●", Warn = "●", Info = "●", Hint = "●" }
 for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl })
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl })
 end
 
 vim.diagnostic.config({
@@ -31,13 +31,16 @@ vim.diagnostic.config({
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
     -- Enable completion triggered by <c-x><c-o>
     buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
+    vim.api.nvim_create_user_command("Format", vim.lsp.buf.formatting, {})
+
     -- Mappings.
-    local opts = { noremap=true, silent=true }
+    local opts = { noremap = true, silent = true }
 
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
@@ -49,7 +52,6 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
     buf_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
     buf_set_keymap('n', '<Leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
-    buf_set_keymap('n', '<Leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
     buf_set_keymap('n', '<Leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
     buf_set_keymap('n', '<Leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
@@ -75,12 +77,21 @@ nvim_lsp.ccls.setup {
     }
 }
 
+nvim_lsp.sumneko_lua.setup {
+    -- capabilities = capabilities,
+    filetypes = { "lua" },
+    on_attach = on_attach,
+    flags = {
+        debounce_text_changes = 150,
+    }
+}
+
 nvim_lsp.tsserver.setup {
     cmd = { "typescript-language-server", "--stdio" },
     filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
     on_attach = on_attach,
     init_options = {
-      hostInfo = "neovim"
+        hostInfo = "neovim"
     }
 }
 
@@ -89,7 +100,7 @@ nvim_lsp.graphql.setup {
     filetypes = { "graphql", "typescriptreact", "javascriptreact" },
     on_attach = on_attach,
     init_options = {
-      hostInfo = "neovim"
+        hostInfo = "neovim"
     }
 }
 
@@ -98,7 +109,7 @@ nvim_lsp.eslint.setup {
     filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue" },
     on_attach = on_attach,
     init_options = {
-      hostInfo = "neovim"
+        hostInfo = "neovim"
     }
 }
 
@@ -107,14 +118,14 @@ nvim_lsp.cssmodules_ls.setup {
     filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
     on_attach = on_attach,
     init_options = {
-      hostInfo = "neovim"
+        hostInfo = "neovim"
     }
 }
 
 nvim_lsp.bashls.setup {
     cmd = { "bash-language-server", "start" },
     cmd_env = {
-      GLOB_PATTERN = "*@(.sh|.inc|.bash|.command)"
+        GLOB_PATTERN = "*@(.sh|.inc|.bash|.command)"
     },
     filetypes = { "sh" },
     single_file_support = true

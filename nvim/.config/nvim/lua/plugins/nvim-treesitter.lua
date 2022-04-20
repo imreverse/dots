@@ -1,22 +1,17 @@
-require'nvim-treesitter.configs'.setup
-{
-    context_commentstring =
-    {
-        enable = true,
+require'nvim-treesitter.configs'.setup {
+    context_commentstring = {
+        enable = false,
         enable_autocmd = false,
     },
-    highlight =
-    {
+    highlight = {
         enable = true,
         disable = {},
     },
-    indent =
-    {
+    indent = {
         enable = false,
         disable = {},
     },
-    ensure_installed =
-    {
+    ensure_installed = {
         "bash",
         "c",
         "cmake",

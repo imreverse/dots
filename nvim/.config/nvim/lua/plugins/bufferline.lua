@@ -1,30 +1,25 @@
-require "bufferline".setup
-{
-    highlights =
-    {
-        buffer_selected =
-        {
+require "bufferline".setup {
+    highlights = {
+        buffer_selected = {
             guifg = normal_fg,
             guibg = normal_bg,
             gui = "italic"
         }
-    --     indicator_selected = {
-    --         guifg =
-    --         {
-    --             attribute = "bg",
-    --             highlight = "Normal"
-    --         },
-    --         guibg =
-    --         {
-    --             attribute = "bg",
-    --             highlight = "Normal"
-    --         }
-    --     }
+        --     indicator_selected = {
+        --         guifg =
+        --         {
+        --             attribute = "bg",
+        --             highlight = "Normal"
+        --         },
+        --         guibg =
+        --         {
+        --             attribute = "bg",
+        --             highlight = "Normal"
+        --         }
+        --     }
     },
-    options =
-    {
-        offsets =
-        {
+    options = {
+        offsets = {
             {
                 filetype = "NvimTree",
                 text = "Explorer",
@@ -78,25 +73,25 @@ require "bufferline".setup
         separator_style = "slant",
         groups = {
             options = {
-              toggle_hidden_on_enter = true -- when you re-enter a hidden group this options re-opens that group so the buffer is visible
+                toggle_hidden_on_enter = true -- when you re-enter a hidden group this options re-opens that group so the buffer is visible
             },
             items = {
-              {
-                name = "CPP", -- Mandatory
-                highlight = {guisp = "#7aa2f7"}, -- Optional
-                priority = 2, -- determines where it will appear relative to other groups (Optional)
-                icon = "", -- Optional
-                matcher = function(buf) -- Mandatory
-                  return buf.filename:match('%.cpp')
-                end
-              },
-              {
-                name = "Docs",
-                highlight = {gui = "undercurl", guisp = "#B0FF9D"},
-                matcher = function(buf)
-                  return buf.filename:match('%.md') or buf.filename:match('%.txt')
-                end
-              }
+                {
+                    name = "CPP", -- Mandatory
+                    highlight = { guisp = "#7aa2f7" }, -- Optional
+                    priority = 2, -- determines where it will appear relative to other groups (Optional)
+                    icon = "", -- Optional
+                    matcher = function(buf) -- Mandatory
+                        return buf.filename:match('%.cpp')
+                    end
+                },
+                {
+                    name = "Docs",
+                    highlight = { gui = "undercurl", guisp = "#B0FF9D" },
+                    matcher = function(buf)
+                        return buf.filename:match('%.md') or buf.filename:match('%.txt')
+                    end
+                }
             }
         },
     }

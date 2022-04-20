@@ -3,7 +3,7 @@ local colors = {}
 
 -- cmd[[colorscheme catppuccin]]
 
-cmd[[colorscheme dracula]]
+cmd [[colorscheme dracula]]
 colors = require('theme.dracula')
 
 -- require('github-theme').setup({theme_style = "dark",})
@@ -33,6 +33,6 @@ colors = require('theme.dracula')
 -- vim.g.tokyonight_style = "dark"
 -- cmd[[colorscheme tokyonight]]
 
-if next(colors)~=nil then
+if next(colors) ~= nil then
     highlight(colors)
 end

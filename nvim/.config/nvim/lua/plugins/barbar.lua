@@ -1,6 +1,5 @@
 -- Set barbar's options
-vim.g.bufferline =
-{
+vim.g.bufferline = {
     -- Enable/disable animations
     animation = true,
 
@@ -19,8 +18,8 @@ vim.g.bufferline =
     clickable = false,
 
     -- Excludes buffers from the tabline
-    exclude_ft = {'javascript'},
-    exclude_name = {'index'},
+    exclude_ft = { 'javascript' },
+    exclude_name = { 'index' },
 
     -- Enable/disable icons
     -- if set to 'numbers', will show buffer index in the tabline
@@ -76,7 +75,7 @@ map('n', '<A-5>', ':BufferGoto 5<CR>', nosil)
 map('n', '<A-6>', ':BufferGoto 6<CR>', nosil)
 map('n', '<A-7>', ':BufferGoto 7<CR>', nosil)
 map('n', '<A-8>', ':BufferGoto 8<CR>', nosil)
-map('n', '<A-9>', ':BufferLast<CR>',   nosil)
+map('n', '<A-9>', ':BufferLast<CR>', nosil)
 -- Quickly move to a buffer with hotkey
 map('n', '<Leader>b', ':BufferPick<CR>', nosil)
 -- Move b/w buffers

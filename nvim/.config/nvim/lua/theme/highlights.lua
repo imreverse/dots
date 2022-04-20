@@ -1,9 +1,11 @@
 local function bg(group, color)
     cmd("hi " .. group .. " guibg=" .. color)
 end
+
 local function fg(group, color)
     cmd("hi " .. group .. " guifg=" .. color)
 end
+
 local function fg_bg(group, fgcol, bgcol)
     cmd("hi " .. group .. " guifg=" .. fgcol .. " guibg=" .. bgcol)
 end
@@ -31,7 +33,7 @@ function highlight(colors)
     local orange = colors.orange
     local one_bg3 = colors.one_bg3
 
-    fg_bg("Normal",white, black)
+    fg_bg("Normal", white, black)
     fg("cursorlinenr", white)
     fg_bg("WinSeparator", grey, 'None')
 

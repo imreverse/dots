@@ -1,6 +1,5 @@
 require("circles").setup({
-    icons =
-    {
+    icons = {
         empty = "",
         filled = "",
         lsp_prefix = ""

@@ -36,11 +36,9 @@ map('v', 'J', ":m '>+1<CR>gv=gv", nosil)
 map('v', 'K', ":m '<-2<CR>gv=gv", nosil)
 
 -- Don't save change,delete to clipboard
-map('v', 'd', '\"_d', { noremap = true })
-map('n', 'd', '\"_d', { noremap = true })
+map({ 'v', 'n' }, 'd', '\"_d', { noremap = true })
 map('v', 'p', '\"_dP', { noremap = true })
-map('v', 'c', '\"_c', { noremap = true })
-map('n', 'c', '\"_c', { noremap = true })
+map({ 'v', 'n' }, 'c', '\"_c', { noremap = true })
 
 -- Select All
 -- map('n', '<C-a>', 'ggVGy<C-S-o>zz', { noremap = true })

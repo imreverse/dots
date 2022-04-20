@@ -45,10 +45,11 @@
 -- Look out if file masking is provided by default in telescope w/o extension
 
 -- Shorthands used in this repo
-map = vim.api.nvim_set_keymap
-cmd = vim.cmd
-set = vim.opt
-exe = vim.api.nvim_command
+map   = vim.keymap.set
+cmd   = vim.cmd
+set   = vim.opt
+exe   = vim.api.nvim_command
+au    = vim.api.nvim_create_autocmd
 nosil = { noremap = true, silent = true }
 
 -- Key Mappings [key] ---------------------------------
