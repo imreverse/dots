@@ -128,10 +128,10 @@ return require('packer').startup({ function()
         'kyazdani42/nvim-web-devicons',
         config = function() require('plugins.nvim-web-devicons') end
     }
-    -- use {
-    --     'lukas-reineke/indent-blankline.nvim',          -- Indent lines
-    --     config = function() require('plugins.indent-blankline') end
-    -- }
+    use {
+        'lukas-reineke/indent-blankline.nvim',          -- Indent lines
+        config = function() require('plugins.indent-blankline') end
+    }
     use {
         'goolord/alpha-nvim',                               -- Dashboard
         config = function() require('plugins.alpha-nvim') end
