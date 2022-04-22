@@ -22,7 +22,13 @@ export VISUAL="nvim"
 
 # ZSH
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export HISTFILE="$ZDOTDIR/.zsh_history"    # History filepath
-export HISTSIZE=1000000000              # Maximum events for internal history
-export SAVEHIST=1000000000              # Maximum events in history file
-export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
+# History filepath
+export HISTFILE="$ZDOTDIR/.zsh_history"
+# Maximum events for internal history
+export HISTSIZE=1000000000
+# Maximum events in history file
+export SAVEHIST=1000000000
+
+# export path for limelight macos
+export PATH="$HOME/limelight/bin:$PATH"
+# export FZF_DEFAULT_COMMAND='rg --hidden -l ""'

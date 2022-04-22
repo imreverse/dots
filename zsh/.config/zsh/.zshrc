@@ -82,6 +82,7 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^[[Z' reverse-menu-complete            # Enable shift-tab
 
+limelight > /dev/null 2>&1;
 # Enable tab completion highlighting
 zstyle ':completion:*' menu select
 # The following lines were added by compinstall
