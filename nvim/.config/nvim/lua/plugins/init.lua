@@ -137,10 +137,10 @@ return require('packer').startup({ function()
         config = function() require('plugins.alpha-nvim') end
     }
     -- use 'JoosepAlviste/nvim-ts-context-commentstring'
-    -- use {
-    --     'L3MON4D3/LuaSnip',                             -- Snippet manager
-    --     config = function() require('plugins.luasnip') end
-    -- }
+    use {
+        'L3MON4D3/LuaSnip',                             -- Snippet manager
+        config = function() require('plugins.luasnip') end
+    }
     -- use "benfowler/telescope-luasnip.nvim"
     -- use {
     --     'hrsh7th/nvim-cmp',
