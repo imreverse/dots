@@ -108,6 +108,7 @@ mpv av://v4l2:/dev/video2 --profile=low-latency --untimed
         kdialog
         keepassxc
         kio-gdrive
+        kitty
         kolourpaint
         ksysguard (for netspeed widget)
         kvantum-qt5

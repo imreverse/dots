@@ -1,4 +1,3 @@
-vim.g.nvim_tree_highlight_opened_files = 3
 -- vim.g.nvim_tree_group_empty = 1
 -- vim.g.nvim_tree_indent_markers = 1
 -- vim.api.nvim_set_var('nvim_tree_icons',
@@ -28,10 +27,6 @@ vim.g.nvim_tree_highlight_opened_files = 3
 --     }
 -- })
 
-vim.g.nvim_tree_icons = {
-    default = "",
-}
-
 map('n', '<A-e>', ":NvimTreeToggle<CR>:NvimTreeRefresh<CR>", nosil)
 map('n', '<Leader>el', ":NvimTreeFindFile<CR>:NvimTreeRefresh<CR>", nosil)
 map('n', '<Leader>ec', ":NvimTreeCollapse<CR>", nosil)
@@ -52,6 +47,14 @@ require 'nvim-tree'.setup {
     open_on_tab         = false,
     hijack_cursor       = false,
     update_cwd          = true,
+    renderer            = {
+        highlight_opened_files = '3',
+        icons           = {
+            glyphs      = {
+                default = ""
+            }
+        }
+    },
     diagnostics         = {
         enable = true,
         icons = {

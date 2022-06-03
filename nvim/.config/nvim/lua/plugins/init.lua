@@ -103,6 +103,18 @@ return require('packer').startup({ function()
         config = function() require('plugins.gitsigns') end
     }
 
+    -- Git diff
+    use {
+        'sindrets/diffview.nvim',
+        requires = 'nvim-lua/plenary.nvim'
+    }
+
+    -- Git conflict
+    use {
+        'akinsho/git-conflict.nvim',
+        config = function() require('plugins.git-conflict').setup() end
+    }
+
     -- Smooth scroll
     use {
         'karb94/neoscroll.nvim',

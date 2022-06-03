@@ -69,6 +69,13 @@ UUID=${data} /run/media/${userName}/data   ext4    defaults,noatime             
 # Install applications ##################################################################
 # Maybe remove the following yes?
 yes | pacman -S .....
+# essential
+android-tools bat btop chromium dolphin-plugins exa ffmpegthumbs flameshot imagemagick inter-font\
+    kdialog kdiskmark kio-gdrive kitty ksysguard (for netspeed widget) kvantum-qt5 libreoffice-fresh mediainfo-gui\
+    mkvtoolnix-gui mpv neovim plasma-wayland-session qbittorrent qt5-imageformats rclone ripgrep\
+    simplescreenrecorder speedcrunch stow tmux unrar vlc vnote xcftools xclip/wl-clipboard yt-dlp zsh
+# Not necessary
+bash-language-server ccls clamav clamtk discord entr gimp grub grub-customizer jdk-openjdk kcharselect keepassxc kolourpaint lm_sensors lua-language-server
 
 # Change shell ##########################################################################
 chsh -s $(which zsh)
