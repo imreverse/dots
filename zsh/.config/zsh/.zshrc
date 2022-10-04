@@ -89,3 +89,4 @@ zstyle ':completion:*' menu select
 zstyle :compinstall filename "${ZDOTDIR}/.zshrc"
 autoload -Uz compinit; compinit
 # End of lines added by compinstall
+export PATH=/opt/homebrew/bin:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/Users/aayushtyagi/limelight/bin:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-autosuggestions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-completions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-history-substring-search:/Users/aayushtyagi/.antigen/bundles/jeffreytse/zsh-vi-mode:/Users/aayushtyagi/.antigen/bundles/Tarrasch/zsh-bd:/Users/aayushtyagi/.antigen/bundles/romkatv/powerlevel10k

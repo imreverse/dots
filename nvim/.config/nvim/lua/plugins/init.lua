@@ -109,11 +109,12 @@ return require('packer').startup({ function()
         requires = 'nvim-lua/plenary.nvim'
     }
 
-    -- Git conflict
-    use {
-        'akinsho/git-conflict.nvim',
-        config = function() require('plugins.git-conflict').setup() end
-    }
+    -- Git conflict (Keep getting an error on vim startup)
+    -- use {
+    --     'akinsho/git-conflict.nvim',
+    --     tag = '*',
+    --     config = function() require('plugins.git-conflict').setup() end
+    -- }
 
     -- Smooth scroll
     use {

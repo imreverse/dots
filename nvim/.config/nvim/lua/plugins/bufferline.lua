@@ -1,9 +1,9 @@
 require "bufferline".setup {
     highlights = {
         buffer_selected = {
-            guifg = normal_fg,
-            guibg = normal_bg,
-            gui = "italic"
+            fg = normal_fg,
+            bg = normal_bg,
+            italic = true
         }
         --     indicator_selected = {
         --         guifg =
@@ -78,7 +78,7 @@ require "bufferline".setup {
             items = {
                 {
                     name = "CPP", -- Mandatory
-                    highlight = { guisp = "#7aa2f7" }, -- Optional
+                    highlight = { sp = "#7aa2f7" }, -- Optional
                     priority = 2, -- determines where it will appear relative to other groups (Optional)
                     icon = "", -- Optional
                     matcher = function(buf) -- Mandatory
@@ -87,7 +87,7 @@ require "bufferline".setup {
                 },
                 {
                     name = "Docs",
-                    highlight = { gui = "undercurl", guisp = "#B0FF9D" },
+                    highlight = { undercurl = true, sp = "#B0FF9D" },
                     matcher = function(buf)
                         return buf.filename:match('%.md') or buf.filename:match('%.txt')
                     end

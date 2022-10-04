@@ -68,65 +68,65 @@ local nvim_lsp = require('lspconfig')
 -- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-nvim_lsp.ccls.setup {
-    -- capabilities = capabilities,
-    filetypes = { "cpp", "c", "hpp", "h" },
-    on_attach = on_attach,
-    flags = {
-        debounce_text_changes = 150,
-    }
-}
+-- nvim_lsp.ccls.setup {
+--     -- capabilities = capabilities,
+--     filetypes = { "cpp", "c", "hpp", "h" },
+--     on_attach = on_attach,
+--     flags = {
+--         debounce_text_changes = 150,
+--     }
+-- }
 
-nvim_lsp.sumneko_lua.setup {
-    -- capabilities = capabilities,
-    filetypes = { "lua" },
-    on_attach = on_attach,
-    flags = {
-        debounce_text_changes = 150,
-    }
-}
+-- nvim_lsp.sumneko_lua.setup {
+--     -- capabilities = capabilities,
+--     filetypes = { "lua" },
+--     on_attach = on_attach,
+--     flags = {
+--         debounce_text_changes = 150,
+--     }
+-- }
 
-nvim_lsp.tsserver.setup {
-    cmd = { "typescript-language-server", "--stdio" },
-    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
-    on_attach = on_attach,
-    init_options = {
-        hostInfo = "neovim"
-    }
-}
+-- nvim_lsp.tsserver.setup {
+--     cmd = { "typescript-language-server", "--stdio" },
+--     filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+--     on_attach = on_attach,
+--     init_options = {
+--         hostInfo = "neovim"
+--     }
+-- }
 
-nvim_lsp.graphql.setup {
-    cmd = { "graphql-lsp", "server", "-m", "stream" },
-    filetypes = { "graphql", "typescriptreact", "javascriptreact" },
-    on_attach = on_attach,
-    init_options = {
-        hostInfo = "neovim"
-    }
-}
+-- nvim_lsp.graphql.setup {
+--     cmd = { "graphql-lsp", "server", "-m", "stream" },
+--     filetypes = { "graphql", "typescriptreact", "javascriptreact" },
+--     on_attach = on_attach,
+--     init_options = {
+--         hostInfo = "neovim"
+--     }
+-- }
 
-nvim_lsp.eslint.setup {
-    cmd = { "vscode-eslint-language-server", "--stdio" },
-    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue" },
-    on_attach = on_attach,
-    init_options = {
-        hostInfo = "neovim"
-    }
-}
+-- nvim_lsp.eslint.setup {
+--     cmd = { "vscode-eslint-language-server", "--stdio" },
+--     filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue" },
+--     on_attach = on_attach,
+--     init_options = {
+--         hostInfo = "neovim"
+--     }
+-- }
 
-nvim_lsp.cssmodules_ls.setup {
-    cmd = { "cssmodules-language-server" },
-    filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
-    on_attach = on_attach,
-    init_options = {
-        hostInfo = "neovim"
-    }
-}
+-- nvim_lsp.cssmodules_ls.setup {
+--     cmd = { "cssmodules-language-server" },
+--     filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+--     on_attach = on_attach,
+--     init_options = {
+--         hostInfo = "neovim"
+--     }
+-- }
 
-nvim_lsp.bashls.setup {
-    cmd = { "bash-language-server", "start" },
-    cmd_env = {
-        GLOB_PATTERN = "*@(.sh|.inc|.bash|.command)"
-    },
-    filetypes = { "sh" },
-    single_file_support = true
-}
+-- nvim_lsp.bashls.setup {
+--     cmd = { "bash-language-server", "start" },
+--     cmd_env = {
+--         GLOB_PATTERN = "*@(.sh|.inc|.bash|.command)"
+--     },
+--     filetypes = { "sh" },
+--     single_file_support = true
+-- }
