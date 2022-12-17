@@ -16,6 +16,7 @@
 # Look why I'm unable to save more than 1000 line history in macos
 # Add alias for updating mirrors
 
+
 # Source Antigen
 if ! [ -e ${ZDOTDIR}/plugins/antigen.zsh ]
 then
