@@ -50,12 +50,12 @@ bindkey -M vicmd 'y' vi-yank-help
 
 # Execute tmux when opening terminal (might be better if I use  this only for kitty?)
 # Ref: unix.stackexchange.com/questions/43601
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-    exec tmux new-session -A -s MEOW
-fi
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#     exec tmux new-session -A -s MEOW
+# fi
 
 # Aliases
-alias ls="exa --classify --git --group-directories-first --icons --time-style=long-iso -lhTL1"
+alias ls="exa --classify --group-directories-first --icons --time-style=long-iso -lhTL1"
 alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
@@ -82,11 +82,30 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^[[Z' reverse-menu-complete            # Enable shift-tab
 
-limelight > /dev/null 2>&1;
+# limelight > /dev/null 2>&1;
 # Enable tab completion highlighting
 zstyle ':completion:*' menu select
 # The following lines were added by compinstall
 zstyle :compinstall filename "${ZDOTDIR}/.zshrc"
 autoload -Uz compinit; compinit
 # End of lines added by compinstall
-export PATH=$HOME/bin:/opt/homebrew/bin:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/Users/aayushtyagi/limelight/bin:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-autosuggestions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-completions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-history-substring-search:/Users/aayushtyagi/.antigen/bundles/jeffreytse/zsh-vi-mode:/Users/aayushtyagi/.antigen/bundles/Tarrasch/zsh-bd:/Users/aayushtyagi/.antigen/bundles/romkatv/powerlevel10k:$PATH
+
+# Google config
+
+# g4 / p4 completion (for Google Piper & related commands)
+if [[ -f /etc/bash_completion.d/g4d ]]; then
+  . /etc/bash_completion.d/p4
+  . /etc/bash_completion.d/g4d
+fi
+
+# Fig completion (for Google Fig / Mercurial)
+if [[ -f /etc/bash_completion.d/hgd ]]; then
+  source /etc/bash_completion.d/hgd
+fi
+
+export HERCULES_CLI_INSECURE=true
+export HERCULES_CLI_LAB="csp-shared"
+export ENV_ID="aayushtyagi-${HERCULES_CLI_LAB}"
+export PATH=$HOME/.local/bin/:/usr/local/google/home/$USER/bin:$HOME/bin:/opt/homebrew/bin:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/Users/aayushtyagi/limelight/bin:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-autosuggestions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-completions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-history-substring-search:/Users/aayushtyagi/.antigen/bundles/jeffreytse/zsh-vi-mode:/Users/aayushtyagi/.antigen/bundles/Tarrasch/zsh-bd:/Users/aayushtyagi/.antigen/bundles/romkatv/powerlevel10k:$PATH
+export GOPATH=/usr/local/google/home/aayushtyagi/go
+export PATH=/usr/local/google/home/aayushtyagi/.local/bin/:/usr/local/google/home/aayushtyagi/bin:/usr/local/google/home/aayushtyagi/bin:/opt/homebrew/bin:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/Users/aayushtyagi/limelight/bin:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-autosuggestions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-completions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-history-substring-search:/Users/aayushtyagi/.antigen/bundles/jeffreytse/zsh-vi-mode:/Users/aayushtyagi/.antigen/bundles/Tarrasch/zsh-bd:/Users/aayushtyagi/.antigen/bundles/romkatv/powerlevel10k:/usr/local/google/home/aayushtyagi/.local/bin/:/usr/local/google/home/aayushtyagi/bin:/opt/homebrew/bin:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/Users/aayushtyagi/limelight/bin:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-autosuggestions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-completions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-history-substring-search:/Users/aayushtyagi/.antigen/bundles/jeffreytse/zsh-vi-mode:/Users/aayushtyagi/.antigen/bundles/Tarrasch/zsh-bd:/Users/aayushtyagi/.antigen/bundles/romkatv/powerlevel10k:/usr/local/google/home/aayushtyagi/limelight/bin:/usr/lib/google-golang/bin:/usr/local/buildtools/java/jdk/bin:/usr/local/google/home/aayushtyagi/.antigen/bundles/zsh-users/zsh-autosuggestions:/usr/local/google/home/aayushtyagi/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/usr/local/google/home/aayushtyagi/.antigen/bundles/zsh-users/zsh-completions:/usr/local/google/home/aayushtyagi/.antigen/bundles/zsh-users/zsh-history-substring-search:/usr/local/google/home/aayushtyagi/.antigen/bundles/jeffreytse/zsh-vi-mode:/usr/local/google/home/aayushtyagi/.antigen/bundles/Tarrasch/zsh-bd:/usr/local/google/home/aayushtyagi/.antigen/bundles/romkatv/powerlevel10k:/bin:/usr/local/google/home/aayushtyagi/go/bin

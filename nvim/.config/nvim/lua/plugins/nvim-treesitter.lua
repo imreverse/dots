@@ -19,6 +19,7 @@ require'nvim-treesitter.configs'.setup {
         "cpp",
         "css",
         "fish",
+        "go",
         "graphql",
         "html",
         "java",
