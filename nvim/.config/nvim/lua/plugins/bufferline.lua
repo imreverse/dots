@@ -1,100 +1,68 @@
 require "bufferline".setup {
-    highlights = {
-        buffer_selected = {
-            fg = normal_fg,
-            bg = normal_bg,
-            italic = true
-        }
-        --     indicator_selected = {
-        --         guifg =
-        --         {
-        --             attribute = "bg",
-        --             highlight = "Normal"
-        --         },
-        --         guibg =
-        --         {
-        --             attribute = "bg",
-        --             highlight = "Normal"
-        --         }
-        --     }
-    },
-    options = {
-        offsets = {
-            {
-                filetype = "NvimTree",
-                text = "Explorer",
-                highlight = "Directory",
-                text_align = "center"
-                -- padding = 1
-            },
-            {
-                filetype = "undotree",
-                text = "Undo History",
-                highlight = "Directory",
-                text_align = "center"
-                -- padding = 1
-            },
-            {
-                filetype = "fugitiveblame",
-                text = "Git Blame",
-                highlight = "Directory",
-                text_align = "center"
-                -- padding = 1
-            },
-            {
-                filetype = "packer",
-                text = "Neovim Package Manager",
-                highlight = "Directory",
-                text_align = "center"
-                -- padding = 1
-            },
-            {
-                filetype = "help",
-                text = "Help",
-                highlight = "Directory",
-                text_align = "center"
-                -- padding = 1
-            }
-        },
-        show_buffer_icons = false,
-        buffer_close_icon = "",
-        modified_icon = "﯂",
-        close_icon = "",
-        left_trunc_marker = "",
-        right_trunc_marker = "",
-        max_name_length = 14,
-        max_prefix_length = 13,
-        -- tab_size = 20,
-        show_tab_indicators = true,
-        enforce_regular_tabs = false,
-        view = "multiwindow",
-        show_buffer_close_icons = false,
-        show_close_icon = false,
-        separator_style = "slant",
-        groups = {
-            options = {
-                toggle_hidden_on_enter = true -- when you re-enter a hidden group this options re-opens that group so the buffer is visible
-            },
-            items = {
-                {
-                    name = "CPP", -- Mandatory
-                    highlight = { sp = "#7aa2f7" }, -- Optional
-                    priority = 2, -- determines where it will appear relative to other groups (Optional)
-                    icon = "", -- Optional
-                    matcher = function(buf) -- Mandatory
-                        return buf.filename:match('%.cpp')
-                    end
-                },
-                {
-                    name = "Docs",
-                    highlight = { undercurl = true, sp = "#B0FF9D" },
-                    matcher = function(buf)
-                        return buf.filename:match('%.md') or buf.filename:match('%.txt')
-                    end
-                }
-            }
-        },
-    }
+	highlights = {
+		-- separator_selected = {
+		-- 	fg = '#000000',
+		-- 	bg = '#000000',
+		-- },
+		-- separator_visible = {
+		-- 	fg = '#000000',
+		-- 	bg = '#000000',
+		-- },
+		-- separator = {
+		-- 	fg = '#000000',
+		-- 	bg = '#000000',
+		-- },
+	},
+	options = {
+		offsets = {
+			{
+				filetype = "NvimTree",
+				text = "Explorer",
+				highlight = "Directory",
+				text_align = "center"
+				-- padding = 1
+			},
+			{
+				filetype = "undotree",
+				text = "Undo History",
+				highlight = "Directory",
+				text_align = "center"
+				-- padding = 1
+			},
+			{
+				filetype = "fugitiveblame",
+				text = "Git Blame",
+				highlight = "Directory",
+				text_align = "center"
+				-- padding = 1
+			},
+			{
+				filetype = "packer",
+				text = "Neovim Package Manager",
+				highlight = "Directory",
+				text_align = "center"
+				-- padding = 1
+			},
+			{
+				filetype = "help",
+				text = "Help",
+				highlight = "Directory",
+				text_align = "center"
+				-- padding = 1
+			}
+		},
+		show_buffer_icons = false,
+		modified_icon = "﯂",
+		max_name_length = 14,
+		max_prefix_length = 13,
+		-- tab_size = 20,
+		-- show_tab_indicators = true,
+		-- enforce_regular_tabs = false,
+		-- view = "multiwindow",
+		show_buffer_close_icons = false,
+		show_close_icon = false,
+		separator_style = "slant",
+	}
 }
 
 -- Goto buffer in position...

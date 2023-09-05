@@ -1,10 +1,23 @@
 local highlight = require('theme.highlights')
 local colors = {}
 
--- cmd[[colorscheme catppuccin]]
+cmd[[colorscheme catppuccin]]
 
-cmd [[colorscheme dracula]]
-colors = require('theme.dracula')
+-- cmd [[colorscheme dracula]]
+-- colors = require('theme.dracula')
+
+-- vim.cmd('colorscheme github_light_tritanopia')
+-- -- Default options
+-- -- require('github-theme').setup({
+-- --   groups = {
+-- --     all = {
+-- -- 	    CursorLine = { bg = '#090909' }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+-- --     },
+-- --   },
+-- -- })
+
+-- setup must be called before loading
+-- vim.cmd('colorscheme github_dark')
 
 -- require('github-theme').setup({theme_style = "dark",})
 

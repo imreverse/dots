@@ -184,7 +184,7 @@ require 'lualine'.setup
     {
         options = {
             icons_enabled = true,
-            theme = r3v,
+            -- theme = r3v,
             section_separators = { left = leftSecSep, right = rightSecSep },
             component_separators = { left = leftComSep, right = rightComSep },
             disabled_filetypes = {},

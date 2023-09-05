@@ -1,145 +1,132 @@
 -- Bootstrap
-local fn = vim.fn
-local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({ 'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path })
-    exe 'packadd packer.nvim'
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
 end
+vim.opt.rtp:prepend(lazypath)
 
 -- Plugins
-return require('packer').startup({ function()
+require("lazy").setup({
     ---------------------------------------------------------------------------
     -- Essential (bare minimum) -----------------------------------------------
 
-    -- Plugin manager
-    use 'wbthomason/packer.nvim'
+    -- the colorscheme should be available when starting Neovim
+    {
+	    "catppuccin/nvim",
+	    -- "dracula/vim"
+	    -- "catppuccin/nvim"
+	    -- "projekt0n/github-nvim-theme"
+	    -- "ellisonleao/gruvbox.nvim"
+	    -- "shaunsingh/nord.nvim"
+	    -- "ful1e5/onedark.nvim"
+	    -- "olimorris/onedarkpro.nvim"
+	    -- "sainnhe/sonokai"
+	    -- "folke/tokyonight.nvim"
+	    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+	    priority = 1000, -- make sure to load this before all the other start plugins
+    },
 
-    -- Search with count 99+
-    use 'google/vim-searchindex'
-
-    -- Highlight current search term
-    use 'airblade/vim-current-search-match'
+    -- [TODO: this doesn't work] Search with count 99+
+    -- { "google/vim-searchindex", lazy = true },
 
     -- Treesitter
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        config = function() require('plugins.nvim-treesitter') end
-    }
-
-    -- LSP
-    -- use {
-    --     'neovim/nvim-lspconfig',
-    --     config = function() require('plugins.nvim-lspconfig') end
-    -- }
+    {
+	    "nvim-treesitter/nvim-treesitter",
+	    build = ":TSUpdate",
+	    config = function()
+		    require('plugins.nvim-treesitter')
+	    end,
+    },
 
     -- Zero LSP
-	use {
-		'VonHeikemen/lsp-zero.nvim',
-		requires = {
-			-- LSP Support
-			{'neovim/nvim-lspconfig'},
-			{'williamboman/mason.nvim'},
-			{'williamboman/mason-lspconfig.nvim'},
+    {
+	    'VonHeikemen/lsp-zero.nvim',
+	    branch = 'v2.x',
+	    dependencies = {
+		    -- LSP Support
+		    {'neovim/nvim-lspconfig'},             -- Required
+		    {'williamboman/mason.nvim'},           -- Optional
+		    {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},
-			{'hrsh7th/cmp-buffer'},
-			{'hrsh7th/cmp-path'},
-			{'saadparwaiz1/cmp_luasnip'},
-			{'hrsh7th/cmp-nvim-lsp'},
-			{'hrsh7th/cmp-nvim-lua'},
-
-			-- Snippets
-			{'L3MON4D3/LuaSnip'},
-			{'rafamadriz/friendly-snippets'},
-		},
-		config = function() require('plugins.lsp-zero') end
-	}
-
-	-- install without yarn or npm
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = function() vim.fn["mkdp#util#install"]() end,
-	})
-
-	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-
-    -- Colorschemes
-    use 'dracula/vim'
-    -- use 'catppuccin/nvim'
-    -- use 'projekt0n/github-nvim-theme'
-    -- use 'ellisonleao/gruvbox.nvim'
-    -- use 'shaunsingh/nord.nvim'
-    -- use 'ful1e5/onedark.nvim'
-    -- use 'olimorris/onedarkpro.nvim'
-    -- use 'sainnhe/sonokai'
-    -- use 'folke/tokyonight.nvim'
+		    -- Autocompletion
+		    {'hrsh7th/nvim-cmp'},     -- Required
+		    {'hrsh7th/cmp-nvim-lsp'}, -- Required
+		    {'L3MON4D3/LuaSnip'},     -- Required
+	    },
+	    config = function() require('plugins.lsp-zero') end
+    },
 
     -- Fuzzy searcher
-    use {
-        'nvim-telescope/telescope.nvim',
-        requires = {
-            { 'nvim-lua/plenary.nvim' },
-            { 'nvim-telescope/telescope-rg.nvim' }
-        },
-        config = function() require('plugins.telescope') end
-    }
+    {
+	    "nvim-telescope/telescope.nvim",
+	    dependencies = {
+		    "nvim-lua/plenary.nvim",
+		    "nvim-telescope/telescope-live-grep-args.nvim",
+	    },
+	    config = function()
+		require('plugins.telescope')
+	    end,
+    },
 
     -- Undo history
-    use {
-        'mbbill/undotree',
-        config = function() require('plugins.undotree') end
-    }
+    {
+	    'mbbill/undotree',
+	    config = function() require('plugins.undotree') end
+    },
 
     -- Comments handler
-    use {
-        'b3nj5m1n/kommentary',
-        config = function() require('plugins.kommentary') end
-    }
+    {
+	    'numToStr/Comment.nvim',
+	    config = function() require('plugins.comment') end,
+	    lazy = false,
+    },
 
     ---------------------------------------------------------------------------
     -- Good to have (Might have better workflow available) --------------------
 
     -- Statusline
-    use {
+    {
         'nvim-lualine/lualine.nvim',
         config = function() require('plugins.lualine') end
-    }
+    },
 
     -- Bufferline
-    use {
+    {
         'akinsho/nvim-bufferline.lua',
         config = function() require('plugins.bufferline') end
-    }
-    -- use {
-    --     'romgrk/barbar.nvim',
-    --     config = function() require('plugins.barbar') end
-    -- }
+    },
 
     -- Filetree explorer
-    use {
-        'kyazdani42/nvim-tree.lua',
+    {
+        'nvim-tree/nvim-tree.lua',
         config = function() require('plugins.nvim-tree') end
-    }
+    },
 
     -- Git tools
-    use {
+    {
         'tpope/vim-fugitive',
         config = function() require('plugins.vim-fugitive') end
-    }
+    },
 
     -- Git line changes
-    use {
+    {
         'lewis6991/gitsigns.nvim',
-        requires = { { 'nvim-lua/plenary.nvim' } },
+        dependencies = { 'nvim-lua/plenary.nvim' },
         config = function() require('plugins.gitsigns') end
-    }
+    },
 
     -- Git diff
-    use {
+    {
         'sindrets/diffview.nvim',
-        requires = 'nvim-lua/plenary.nvim'
-    }
+        dependencies = 'nvim-lua/plenary.nvim'
+    },
 
     -- Git conflict (Keep getting an error on vim startup)
     -- use {
@@ -149,52 +136,49 @@ return require('packer').startup({ function()
     -- }
 
     -- Smooth scroll
-    use {
+    {
         'karb94/neoscroll.nvim',
         config = function() require('plugins.neoscroll') end
-    }
+    },
 
     -- LSP Loader (bottom right)
-    use {
+    {
         'j-hui/fidget.nvim',
+	tag = "legacy",
+	event = "LspAttach",
         config = function() require "fidget".setup {} end
-    }
+    },
 
     -- Code actions context menu
-    use {
+    {
         'weilbith/nvim-code-action-menu',
         cmd = 'CodeActionMenu'
-    }
+    },
 
     ---------------------------------------------------------------------------
     -- Not Essential (Can work if not there) ----------------------------------
 
-    use {
-        'kyazdani42/nvim-web-devicons',
-        config = function() require('plugins.nvim-web-devicons') end
-    }
-    use {
+    {
+        'nvim-tree/nvim-web-devicons',
+	lazy = true,
+    },
+    {
         'lukas-reineke/indent-blankline.nvim',          -- Indent lines
         config = function() require('plugins.indent-blankline') end
-    }
-    use {
-        'goolord/alpha-nvim',                               -- Dashboard
-        config = function() require('plugins.alpha-nvim') end
-    }
-    -- use 'JoosepAlviste/nvim-ts-context-commentstring'
-    use {
+    },
+ --    use {
+ --        'goolord/alpha-nvim',                               -- Dashboard
+ --        config = function() require('plugins.alpha-nvim') end
+ --    }
+    {
         'L3MON4D3/LuaSnip',                             -- Snippet manager
         config = function() require('plugins.luasnip') end
-    }
+    },
     -- use "benfowler/telescope-luasnip.nvim"
     -- use {
     --     'hrsh7th/nvim-cmp',
     --     requires = {{'hrsh7th/cmp-nvim-lsp','saadparwaiz1/cmp_luasnip'}},
     --     config = function() require('plugins.nvim-cmp') end
-    -- }
-    -- use {
-    --     "akinsho/nvim-toggleterm.lua",                  -- Terminal
-    --     config = function() require('plugins.toggleterm') end
     -- }
     -- use {
     --     'simrat39/symbols-outline.nvim',                -- Function Outline
@@ -212,5 +196,4 @@ return require('packer').startup({ function()
     --     'petertriho/nvim-scrollbar',
     --     config = function() require('plugins.nvim-scrollbar') end
     -- }
-end
 })
