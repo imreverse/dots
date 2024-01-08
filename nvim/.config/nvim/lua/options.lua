@@ -1,7 +1,7 @@
 set.clipboard:append { "unnamedplus" } -- Set clipboard global linux
 -- set.guicursor     = ''                            -- Set cursor block default
 set.cursorline    = true
-set.cursorlineopt = 'number'
+set.cursorlineopt = 'both'
 set.mouse         = 'n'
 set.undofile      = true -- Undofile exists
 set.tabstop       = 8

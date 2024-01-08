@@ -19,7 +19,7 @@ cmd[[colorscheme catppuccin]]
 -- setup must be called before loading
 -- vim.cmd('colorscheme github_dark')
 
--- require('github-theme').setup({theme_style = "dark",})
+-- vim.cmd('colorscheme github_light_tritanopia')
 
 -- vim.o.background = "dark"
 -- cmd[[colorscheme gruvbox]]

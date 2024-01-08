@@ -36,6 +36,12 @@ require("lazy").setup({
     -- [TODO: this doesn't work] Search with count 99+
     -- { "google/vim-searchindex", lazy = true },
 
+    -- Copy over ssh
+    {
+	'ojroques/nvim-osc52',
+        config = function() require('plugins.vim-oscyank') end
+    },
+
     -- Treesitter
     {
 	    "nvim-treesitter/nvim-treesitter",

@@ -97,25 +97,3 @@ zstyle ':completion:*' menu select
 zstyle :compinstall filename "${ZDOTDIR}/.zshrc"
 autoload -Uz compinit; compinit
 # End of lines added by compinstall
-
-# Google config
-
-# g4 / p4 completion (for Google Piper & related commands)
-if [[ -f /etc/bash_completion.d/g4d ]]; then
-  . /etc/bash_completion.d/p4
-  . /etc/bash_completion.d/g4d
-fi
-
-# Fig completion (for Google Fig / Mercurial)
-if [[ -f /etc/bash_completion.d/hgd ]]; then
-  source /etc/bash_completion.d/hgd
-fi
-
-export HERCULES_CLI_INSECURE=true
-export HERCULES_CLI_LAB="csp-shared"
-export ENV_ID="aayushtyagi-${HERCULES_CLI_LAB}"
-export PATH=$HOME/.local/bin:/usr/local/google/home/$USER/bin:$HOME/bin:/opt/homebrew/bin:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/Users/aayushtyagi/limelight/bin:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-autosuggestions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-completions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-history-substring-search:/Users/aayushtyagi/.antigen/bundles/jeffreytse/zsh-vi-mode:/Users/aayushtyagi/.antigen/bundles/Tarrasch/zsh-bd:/Users/aayushtyagi/.antigen/bundles/romkatv/powerlevel10k:$PATH
-export GOPATH=/usr/local/google/home/aayushtyagi/go
-
-# Created by `pipx` on 2023-12-28 11:04:15
-export PATH="$PATH:/home/squidward/.local/bin"

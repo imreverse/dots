@@ -1,18 +1,5 @@
 require "bufferline".setup {
-	highlights = {
-		-- separator_selected = {
-		-- 	fg = '#000000',
-		-- 	bg = '#000000',
-		-- },
-		-- separator_visible = {
-		-- 	fg = '#000000',
-		-- 	bg = '#000000',
-		-- },
-		-- separator = {
-		-- 	fg = '#000000',
-		-- 	bg = '#000000',
-		-- },
-	},
+	highlights = require("catppuccin.groups.integrations.bufferline").get(),
 	options = {
 		offsets = {
 			{
