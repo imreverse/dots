@@ -1,39 +1,39 @@
 require "bufferline".setup {
-	highlights = require("catppuccin.groups.integrations.bufferline").get(),
+	-- highlights = require("catppuccin.groups.integrations.bufferline").get(),
 	options = {
 		offsets = {
 			{
 				filetype = "NvimTree",
 				text = "Explorer",
-				highlight = "Directory",
+				-- highlight = "Directory",
 				text_align = "center"
 				-- padding = 1
 			},
 			{
 				filetype = "undotree",
 				text = "Undo History",
-				highlight = "Directory",
+				-- highlight = "Directory",
 				text_align = "center"
 				-- padding = 1
 			},
 			{
 				filetype = "fugitiveblame",
 				text = "Git Blame",
-				highlight = "Directory",
+				-- highlight = "Directory",
 				text_align = "center"
 				-- padding = 1
 			},
 			{
 				filetype = "packer",
 				text = "Neovim Package Manager",
-				highlight = "Directory",
+				-- highlight = "Directory",
 				text_align = "center"
 				-- padding = 1
 			},
 			{
 				filetype = "help",
 				text = "Help",
-				highlight = "Directory",
+				-- highlight = "Directory",
 				text_align = "center"
 				-- padding = 1
 			}

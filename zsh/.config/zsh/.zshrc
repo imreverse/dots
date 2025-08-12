@@ -97,3 +97,38 @@ zstyle ':completion:*' menu select
 zstyle :compinstall filename "${ZDOTDIR}/.zshrc"
 autoload -Uz compinit; compinit
 # End of lines added by compinstall
+
+# Google config
+
+alias pastebin="/google/src/head/depot/eng/tools/pastebin"
+
+# g4 / p4 completion (for Google Piper & related commands)
+if [[ -f /etc/bash_completion.d/g4d ]]; then
+  . /etc/bash_completion.d/p4
+  . /etc/bash_completion.d/g4d
+fi
+
+# Fig completion (for Google Fig / Mercurial)
+if [[ -f /etc/bash_completion.d/hgd ]]; then
+  source /etc/bash_completion.d/hgd
+fi
+
+# envs for herc
+export HERCULES_CLI_INSECURE=true
+export HERCULES_CLI_LAB="atl_baremetal"
+export ENV_ID="aayushtyagi-${HERCULES_CLI_LAB}"
+
+export PATH=$HOME/.local/bin:/usr/local/google/home/$USER/bin:$HOME/bin:/opt/homebrew/bin:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/Users/aayushtyagi/limelight/bin:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-autosuggestions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-completions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-history-substring-search:/Users/aayushtyagi/.antigen/bundles/jeffreytse/zsh-vi-mode:/Users/aayushtyagi/.antigen/bundles/Tarrasch/zsh-bd:/Users/aayushtyagi/.antigen/bundles/romkatv/powerlevel10k:$PATH
+export GOPATH=/$HOME/go:$HOME/meow
+export PATH=/$HOME/.local/bin:/$HOME/bin:/$HOME/bin:/opt/homebrew/bin:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/Users/aayushtyagi/limelight/bin:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-autosuggestions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-completions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-history-substring-search:/Users/aayushtyagi/.antigen/bundles/jeffreytse/zsh-vi-mode:/Users/aayushtyagi/.antigen/bundles/Tarrasch/zsh-bd:/Users/aayushtyagi/.antigen/bundles/romkatv/powerlevel10k:/$HOME/.local/bin/:/$HOME/bin:/opt/homebrew/bin:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/Users/aayushtyagi/limelight/bin:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-autosuggestions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-completions:/Users/aayushtyagi/.antigen/bundles/zsh-users/zsh-history-substring-search:/Users/aayushtyagi/.antigen/bundles/jeffreytse/zsh-vi-mode:/Users/aayushtyagi/.antigen/bundles/Tarrasch/zsh-bd:/Users/aayushtyagi/.antigen/bundles/romkatv/powerlevel10k:/$HOME/limelight/bin:/usr/lib/google-golang/bin:/usr/local/buildtools/java/jdk/bin:/$HOME/.antigen/bundles/zsh-users/zsh-autosuggestions:/$HOME/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/$HOME/.antigen/bundles/zsh-users/zsh-completions:/$HOME/.antigen/bundles/zsh-users/zsh-history-substring-search:/$HOME/.antigen/bundles/jeffreytse/zsh-vi-mode:/$HOME/.antigen/bundles/Tarrasch/zsh-bd:/$HOME/.antigen/bundles/romkatv/powerlevel10k:/bin:/$HOME/go/bin:~/.local/share/bob/v0.9.5/nvim-linux64/bin
+
+# envs req for running kt2-syllogi
+# go/syllogitest-user-guide#minimal-prerequisites
+export SERVICE_ACCOUNT_KEY_FILE=~/.syllogi/component-access.json
+export GKE_CONNECT_KEY_PATH=~/.syllogi/connect-register.json
+export GKE_REGISTER_KEY_PATH=$GKE_CONNECT_KEY_PATH
+export CONNECT_PROJECT_ID=aayushtyagi-anthos-dev
+export SYLLOGI_FEATURE_GATES="ConfigDrivenInstallation=true"
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/plugins/p10k.zsh.
+[[ ! -f ~/.config/zsh/plugins/p10k.zsh ]] || source ~/.config/zsh/plugins/p10k.zsh

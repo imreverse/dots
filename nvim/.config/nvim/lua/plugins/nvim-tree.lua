@@ -6,7 +6,8 @@ map('n', '<Leader>ec', ":NvimTreeCollapse<CR>", nosil)
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 require 'nvim-tree'.setup {
 	renderer            = {
-		highlight_opened_files = '3',
+		root_folder_label = false,
+		highlight_opened_files = 'all',
 		icons           = {
 			glyphs      = {
 				default = ""
@@ -24,7 +25,6 @@ require 'nvim-tree'.setup {
 	},
 	view                = {
 		width = 30,
-		hide_root_folder = false,
 		side = 'left',
 		number = false,
 		relativenumber = false,

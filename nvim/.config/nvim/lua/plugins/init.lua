@@ -106,6 +106,7 @@ require("lazy").setup({
     -- Bufferline
     {
         'akinsho/nvim-bufferline.lua',
+	dependencies = { "catppuccin/nvim" },
         config = function() require('plugins.bufferline') end
     },
 
@@ -178,7 +179,7 @@ require("lazy").setup({
  --    }
     {
         'L3MON4D3/LuaSnip',                             -- Snippet manager
-        config = function() require('plugins.luasnip') end
+        -- config = function() require('plugins.luasnip') end
     },
     -- use "benfowler/telescope-luasnip.nvim"
     -- use {

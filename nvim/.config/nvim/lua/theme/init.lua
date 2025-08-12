@@ -1,7 +1,22 @@
-local highlight = require('theme.highlights')
-local colors = {}
+-- local highlight = require('theme.highlights')
+-- local colors = {}
 
-cmd[[colorscheme catppuccin]]
+-- require("catppuccin").setup({
+-- 	flavor = "latte",
+-- 	integrations = {
+-- 		cmp = true,
+-- 		bufferline = true,
+-- 		gitsigns = true,
+-- 		nvimtree = true,
+-- 		treesitter = true,
+-- 		notify = false,
+-- 		mini = {
+-- 			enabled = true,
+-- 			indentscope_color = "",
+-- 		},
+-- 	}
+-- })
+vim.cmd('colorscheme catppuccin')
 
 -- cmd [[colorscheme dracula]]
 -- colors = require('theme.dracula')
@@ -46,6 +61,6 @@ cmd[[colorscheme catppuccin]]
 -- vim.g.tokyonight_style = "dark"
 -- cmd[[colorscheme tokyonight]]
 
-if next(colors) ~= nil then
-    highlight(colors)
-end
+-- if next(colors) ~= nil then
+--     highlight(colors)
+-- end
